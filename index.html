@@ -3,6 +3,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <title>Cauã Chaim - Portfólio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
   --primary: #00275b;   /* royal bem escuro */
@@ -13,7 +14,7 @@
   --accent: #0055aa;    /* azul mais escuro para hover/destaques */
     }
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background: var(--light);
   color: var(--dark);
   line-height: 1.6;
@@ -149,6 +150,12 @@ section#about {
   transform: translateY(-10px) scale(1.03);
   box-shadow: 0 12px 25px rgba(0,0,0,0.7);
 }
+/* Efeito de clique */
+.projects-cards .card:active {
+  transform: scale(0.95);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+    
 .projects-cards .card img {
   width: 100%;
   height: 180px;
@@ -383,6 +390,7 @@ footer {
     &copy; 2025 Cauã Chaim. Todos os direitos reservados.
    <!-- Script animações -->
   <script>
+    
     const sections = document.querySelectorAll('.hidden');
     function showOnScroll() {
       const trigger = window.innerHeight * 0.85;
@@ -393,9 +401,18 @@ footer {
     }
     window.addEventListener('scroll', showOnScroll);
     showOnScroll();
+    // Rolagem suave personalizada
+document.querySelectorAll('nav a, .btn-hero').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    document.querySelector(link.getAttribute('href'))
+      .scrollIntoView({ behavior: 'smooth' });
+  });
+});
   </script>
 </body>
 </html>
+
 
 
 
