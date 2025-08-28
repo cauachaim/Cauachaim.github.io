@@ -23,26 +23,60 @@
         }
 
         /* Header */
-        header {
-            background-color: var(--primary-color);
-            color: #fff;
-            padding: 60px 20px;
-            text-align: center;
-        }
+header {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 20px;
+    position: sticky; /* 🔹 Fica fixo no topo ao rolar */
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-        header h1 {
-            margin: 0;
-            font-size: 42px;
-            color: #fff; /* 🔹 Mantém sempre branco */
-        }
+header h1 {
+    margin: 0;
+    font-size: 26px;
+    color: #fff;
+    letter-spacing: 1px;
+}
 
-        nav.links ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 15px;
+/* Navbar links */
+nav.links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav.links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav.links ul li a:hover {
+    background: #fff;
+    color: var(--primary-color);
+}
+
+/* Mobile */
+@media(max-width:768px){
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    nav.links ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
         }
 
         nav.links ul li a {
@@ -161,8 +195,8 @@
         <h1>Cauã Chaim</h1>
         <nav class="links">
             <ul>
-                <li><a href="#projects">Projetos</a></li>
-                <li><a href="#about">Sobre</a></li>
+                <li><a href="#projects">Sobre</a></li>
+                <li><a href="#about">Projetos</a></li>
                 <li><a href="#contact">Contato</a></li>
             </ul>
         </nav>
@@ -286,3 +320,4 @@
     </script>
 </body>
 </html>
+
