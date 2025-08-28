@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <title>Cauã Chaim - Portfólio</title>
     <style>
+        /* Cores e fontes */
         :root {
-            --primary-color: #0d1a33; /* azul bem forte, quase preto */
+            --primary-color: #0d1a33; /* Azul forte */
             --background-color: #f5f7fa;
             --text-color: #333;
-            --header-color: #1a1a1a;
             --card-bg: #fff;
         }
 
@@ -21,29 +21,54 @@
             color: var(--text-color);
         }
 
-        /* Header */
+        /* Header / Card Inicial */
         header {
             background-color: var(--primary-color);
             color: #fff;
-            padding: 60px 20px 40px 20px;
+            padding: 60px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .header-card {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            justify-content: center;
-            gap: 30px;
+            max-width: 1000px;
+            gap: 40px;
+            background-color: #14244d;
+            padding: 30px 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
 
-        header img {
-            width: 250px;
-            height: 250px;
+        .header-card img {
+            width: 240px;
+            height: 240px;
             border-radius: 50%;
             object-fit: cover;
-            border: 4px solid #fff;
+            border: 5px solid #fff;
         }
 
-        header h1 {
+        .header-text {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .header-text h1 {
             font-size: 42px;
-            margin: 0;
+            margin: 0 0 15px 0;
+        }
+
+        .header-text p {
+            font-size: 20px;
+            line-height: 1.6;
+        }
+
+        nav.links {
+            margin-top: 25px;
+            text-align: center;
+            width: 100%;
         }
 
         nav.links ul {
@@ -52,20 +77,19 @@
             display: flex;
             justify-content: center;
             gap: 30px;
-            width: 100%;
-            margin-top: 20px;
+            flex-wrap: wrap;
         }
 
         nav.links ul li a {
             color: #fff;
             text-decoration: none;
             font-weight: bold;
-            font-size: 18px;
+            font-size: 16px;
             transition: color 0.3s;
         }
 
         nav.links ul li a:hover {
-            color: #a0b8ff;
+            color: #dcefff;
         }
 
         /* Sections */
@@ -73,33 +97,12 @@
             padding: 60px 20px;
         }
 
-        /* Sobre */
-        #about {
-            text-align: center;
-        }
-
-        #about h2 {
-            font-size: 34px;
-            margin-bottom: 15px;
-        }
-
-        #about p {
-            max-width: 650px;
-            margin: 0 auto;
-            font-size: 20px;
-            line-height: 1.6;
-        }
-
         /* Projetos */
-        #projects {
-            background-color: #e8f0fc;
-        }
-
         #projects h2 {
             text-align: center;
-            font-size: 34px;
+            font-size: 32px;
             margin-bottom: 50px;
-            color: var(--header-color);
+            color: var(--primary-color);
         }
 
         .project-section, .post {
@@ -123,7 +126,7 @@
         }
 
         .project-section h4 {
-            font-size: 22px;
+            font-size: 20px;
             margin: 20px 0 10px 0;
             color: var(--primary-color);
         }
@@ -141,7 +144,7 @@
 
         .project-section ul li, .post ul li {
             margin-bottom: 8px;
-            font-size: 17px;
+            font-size: 18px;
         }
 
         .project-section a, .post a {
@@ -153,19 +156,11 @@
             text-decoration: underline;
         }
 
-        /* Imagens de projetos */
         .project-images {
             display: flex;
-            flex-direction: column; /* empilhar fotos verticalmente */
+            flex-direction: column;
             gap: 20px;
             margin-bottom: 20px;
-            align-items: center;
-        }
-
-        .project-images figure {
-            text-align: center;
-            max-width: 450px;
-            width: 100%;
         }
 
         .project-images img {
@@ -176,25 +171,22 @@
 
         figure figcaption {
             margin-top: 8px;
-            font-size: 16px; /* legenda maior */
+            font-size: 18px; /* aumento da legenda */
             color: #555;
+            text-align: center;
         }
 
-        /* Vídeos */
         video {
             border-radius: 12px;
             max-width: 100%;
         }
 
         /* Contato */
-        #contact {
-            text-align: center;
-        }
-
         #contact h2 {
-            font-size: 34px;
+            font-size: 32px;
             margin-bottom: 40px;
-            color: var(--header-color);
+            text-align: center;
+            color: var(--primary-color);
         }
 
         #contact ul {
@@ -203,6 +195,7 @@
             display: flex;
             justify-content: center;
             gap: 30px;
+            flex-wrap: wrap;
         }
 
         #contact a {
@@ -214,10 +207,9 @@
         }
 
         #contact a:hover {
-            color: #a0b8ff;
+            color: #1d3f73;
         }
 
-        /* Footer */
         footer {
             text-align: center;
             padding: 25px 0;
@@ -231,13 +223,13 @@
         }
 
         /* Responsivo */
-        @media(max-width:768px){
-            header {
+        @media(max-width:900px){
+            .header-card {
                 flex-direction: column;
+                text-align: center;
             }
-            nav.links ul {
-                flex-direction: column;
-                gap: 15px;
+            .header-text {
+                min-width: 100%;
             }
         }
     </style>
@@ -246,29 +238,27 @@
 
 <!-- Header -->
 <header>
-    <img src="assets/images/IMG_20240913_202036_110.webp" alt="Cauã Chaim">
-    <h1>Cauã Chaim</h1>
-    <nav class="links">
-        <ul>
-            <li><a href="#projects">Projetos</a></li>
-            <li><a href="#about">Sobre</a></li>
-            <li><a href="#contact">Contato</a></li>
-        </ul>
-    </nav>
+    <div class="header-card">
+        <img src="assets/images/IMG_20240913_202036_110.webp" alt="Cauã Chaim">
+        <div class="header-text">
+            <h1>Cauã Chaim</h1>
+            <p> Técnico em eletrônica, com experiência em programação, projetos eletrônicos e edição. Sempre em busca de soluções práticas para o dia a dia.</p>
+            <nav class="links">
+                <ul>
+                    <li><a href="#projects">Projetos</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
 </header>
-
-<!-- Sobre -->
-<section id="about">
-    <h2>Cauã Chaim</h2>
-    <p>Técnico em eletrônica, com experiência em programação, montagem de projetos eletrônicos e editor. Apaixonado por robótica e desenvolvimento de soluções práticas para desafios do dia a dia.</p>
-</section>
 
 <!-- Projetos -->
 <section id="projects">
-    <h2>Projetos</h2>
+    <h2>Projetos de Robótica e Arduíno</h2>
 
     <!-- Robótica -->
-    <div class="project-section" id="robotics">
+    <div class="project-section">
         <h3>Robótica - OBR 2024</h3>
         <p><strong>Liderei o grupo na Olimpíada Brasileira de Robótica (OBR)</strong>. A equipe Cyberdroids foi a única em 2024 de Campos dos Goytacazes a passar para a fase estadual. O projeto foi construído com kits LEGO (Spike/EV3), sensores infravermelhos e programação em <strong>Arduino (EV3 / NXT / Spike)</strong>.</p>
 
@@ -299,69 +289,25 @@
             </video>
             <figcaption>Vídeo 2 - Teste de percurso</figcaption>
         </figure>
-
-        <h4>📰 Notícias</h4>
-        <p><a href="https://portal1.iff.edu.br/nossos-campi/campos-guarus/noticias/equipe-de-robotica-do-iff-guarus-conquista-vaga-na-etapa-regional-da-olimpiada-brasileira-de-robotica" target="_blank">Notícia sobre a OBR 2024</a></p>
-
-        <h4>⚙️ Funcionalidades</h4>
-        <ul>
-            <li>Seguidor de linha com sensor óptico</li>
-            <li>Desvio de obstáculos</li>
-            <li>Estrutura modular com LEGO</li>
-            <li>Programação em Spike</li>
-        </ul>
-
-        <h4>🏆 Objetivo</h4>
-        <p>Participar da <strong>OBR 2024</strong>, testando habilidades de programação, eletrônica e montagem de robôs.</p>
     </div>
 
     <!-- Projetos Eletrônicos -->
-    <div class="project-section" id="eletronics">
-        <h3>Projetos Eletrônicos</h3>
-        <p>Desenvolvimento de diversos projetos eletrônicos, aplicando conhecimentos de programação, sensores e automação. Destaque para o projeto de simulação da pálpebra do Mike Walsalsk.</p>
+    <div class="project-section">
+        <h3>Projetos Eletrônicos - Mike Walsalsk</h3>
+        <p>Construção do Mike Walsalsk simulando a pálpebra abrir e fechar com sensor de proximidade e relé, além de controle do LED baseado na iluminação.</p>
 
-        <h4>📸 Fotos dos projetos</h4>
+        <h4>📸 Fotos do projeto</h4>
         <div class="project-images">
             <figure>
-                <img src="assets/images/mike_palpabra1.jpg" alt="Simulação da pálpebra Mike Walsalsk">
-                <figcaption>Simulação da pálpebra - Sensor e relé em ação</figcaption>
+                <img src="assets/images/mike1.jpg" alt="Mike Walsalsk visão frontal">
+                <figcaption>Mike Walsalsk - Frente</figcaption>
             </figure>
             <figure>
-                <img src="assets/images/mike_palpabra2.jpg" alt="Projeto Mike Walsalsk">
-                <figcaption>LED indicando iluminação ambiente</figcaption>
+                <img src="assets/images/mike2.jpg" alt="Mike Walsalsk close sensor">
+                <figcaption>Sensor de proximidade e relé</figcaption>
             </figure>
         </div>
-
-        <h4>🎥 Vídeos</h4>
-        <figure>
-            <video controls>
-                <source src="assets/images/video_mike.mp4" type="video/mp4">
-                Seu navegador não suporta vídeo.
-            </video>
-            <figcaption>Vídeo - Funcionamento do sistema de pálpebra e LED</figcaption>
-        </figure>
-
-        <h4>⚙️ Funcionalidades</h4>
-        <ul>
-            <li>Sensor de proximidade detecta aproximação</li>
-            <li>Relé controla abertura e fechamento da pálpebra</li>
-            <li>LED acende ou apaga conforme a iluminação do ambiente</li>
-            <li>Controle automatizado e responsivo</li>
-        </ul>
-
-        <h4>🏆 Objetivo</h4>
-        <p>Demonstrar habilidades em automação, eletrônica e controle de sensores em projetos práticos e interativos.</p>
     </div>
-
-    <!-- Workshop post -->
-    <article class="post">
-        <h3>Workshop de Robótica</h3>
-        <figure>
-            <img src="assets/images/Screenshot_2025-08-27-21-37-49-614_com.instagram.android~2.jpg" alt="Apresentando o mundo da robótica para crianças">
-            <figcaption>Ministrando oficina de robótica</figcaption>
-        </figure>
-        <p>Construção e programação de robôs seguidores de linha para estudantes iniciantes, com sensores infravermelhos e controle de motores.</p>
-    </article>
 
 </section>
 
@@ -375,7 +321,6 @@
     </ul>
 </section>
 
-<!-- Footer -->
 <footer>
     &copy; 2025 Cauã Chaim. Design adaptado de <a href="http://html5up.net" target="_blank">HTML5 UP</a>.
 </footer>
@@ -390,7 +335,9 @@ document.querySelectorAll('nav.links a').forEach(link => {
     });
 });
 
+// Fade-in das seções
 const sections = document.querySelectorAll('section, .project-section, .post');
+
 sections.forEach(section => {
     section.style.opacity = 0;
     section.style.transform = 'translateY(50px)';
@@ -403,14 +350,14 @@ function fadeInSections() {
         if (sectionTop < triggerBottom) {
             section.style.opacity = 1;
             section.style.transform = 'translateY(0)';
-section.style.transition = 'all 0.8s ease-out';
-}
-});
+            section.style.transition = 'all 0.8s ease-out';
+        }
+    });
 }
 
 window.addEventListener('scroll', fadeInSections);
 fadeInSections();
 </script>
 
-</body>  
+</body>
 </html>
