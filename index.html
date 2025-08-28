@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <title>Cauã Chaim - Portfólio</title>
     <style>
-        /* Cores e fontes */
         :root {
-            --primary-color: #0d1a33; /* Azul forte */
+            --primary-color: #0d1a33; /* Azul bem forte */
             --background-color: #f5f7fa;
             --text-color: #333;
             --card-bg: #fff;
@@ -21,54 +20,22 @@
             color: var(--text-color);
         }
 
-        /* Header / Card Inicial */
+        /* Header */
         header {
             background-color: var(--primary-color);
             color: #fff;
             padding: 60px 20px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .header-card {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            max-width: 1000px;
-            gap: 40px;
-            background-color: #14244d;
-            padding: 30px 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-
-        .header-card img {
-            width: 240px;
-            height: 240px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid #fff;
-        }
-
-        .header-text {
-            flex: 1;
-            min-width: 250px;
-        }
-
-        .header-text h1 {
-            font-size: 42px;
-            margin: 0 0 15px 0;
-        }
-
-        .header-text p {
-            font-size: 20px;
-            line-height: 1.6;
-        }
-
-        nav.links {
-            margin-top: 25px;
             text-align: center;
-            width: 100%;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            font-size: 20px;
+            margin-bottom: 25px;
         }
 
         nav.links ul {
@@ -92,9 +59,31 @@
             color: #dcefff;
         }
 
-        /* Sections */
-        section {
+        /* Sobre */
+        #about {
+            text-align: center;
             padding: 60px 20px;
+        }
+
+        #about img {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        #about h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        #about p {
+            font-size: 20px;
+            max-width: 650px;
+            margin: 0 auto;
+            line-height: 1.6;
         }
 
         /* Projetos */
@@ -171,7 +160,7 @@
 
         figure figcaption {
             margin-top: 8px;
-            font-size: 18px; /* aumento da legenda */
+            font-size: 18px; /* legenda maior */
             color: #555;
             text-align: center;
         }
@@ -222,14 +211,10 @@
             text-decoration: underline;
         }
 
-        /* Responsivo */
         @media(max-width:900px){
-            .header-card {
+            nav.links ul {
                 flex-direction: column;
-                text-align: center;
-            }
-            .header-text {
-                min-width: 100%;
+                gap: 15px;
             }
         }
     </style>
@@ -238,24 +223,27 @@
 
 <!-- Header -->
 <header>
-    <div class="header-card">
-        <img src="assets/images/IMG_20240913_202036_110.webp" alt="Cauã Chaim">
-        <div class="header-text">
-            <h1>Cauã Chaim</h1>
-            <p> Técnico em eletrônica, com experiência em programação, projetos eletrônicos e edição. Sempre em busca de soluções práticas para o dia a dia.</p>
-            <nav class="links">
-                <ul>
-                    <li><a href="#projects">Projetos</a></li>
-                    <li><a href="#contact">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
+    <h1>Cauã Chaim</h1>
+    <p>Sempre em busca de soluções práticas para o dia a dia.</p>
+    <nav class="links">
+        <ul>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#projects">Projetos</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+    </nav>
 </header>
+
+<!-- Sobre -->
+<section id="about">
+    <img src="assets/images/IMG_20240913_202036_110.webp" alt="Cauã Chaim">
+    <h2>Cauã Chaim</h2>
+    <p>Técnico em eletrônica, com experiência em programação, montagem de projetos eletrônicos e editor. Sempre em busca de soluções práticas para o dia a dia.</p>
+</section>
 
 <!-- Projetos -->
 <section id="projects">
-    <h2>Projetos de Robótica e Arduíno</h2>
+    <h2>Projetos de Robótica e Eletrônicos</h2>
 
     <!-- Robótica -->
     <div class="project-section">
@@ -273,22 +261,6 @@
                 <figcaption>OBR Estadual</figcaption>
             </figure>
         </div>
-
-        <h4>🎥 Vídeos</h4>
-        <figure>
-            <video controls>
-                <source src="assets/images/VID-20250827-WA0004.mp4" type="video/mp4">
-                Seu navegador não suporta vídeo.
-            </video>
-            <figcaption>Vídeo 1 - Robô na competição OBR 2024</figcaption>
-        </figure>
-        <figure>
-            <video controls>
-                <source src="assets/images/VID-20240711-WA0044~2.mp4" type="video/mp4">
-                Seu navegador não suporta vídeo.
-            </video>
-            <figcaption>Vídeo 2 - Teste de percurso</figcaption>
-        </figure>
     </div>
 
     <!-- Projetos Eletrônicos -->
@@ -308,7 +280,6 @@
             </figure>
         </div>
     </div>
-
 </section>
 
 <!-- Contato -->
@@ -337,19 +308,18 @@ document.querySelectorAll('nav.links a').forEach(link => {
 
 // Fade-in das seções
 const sections = document.querySelectorAll('section, .project-section, .post');
-
 sections.forEach(section => {
     section.style.opacity = 0;
     section.style.transform = 'translateY(50px)';
 });
-
 function fadeInSections() {
     const triggerBottom = window.innerHeight * 0.85;
     sections.forEach(section => {
         const sectionTop = section.getBoundingClientRect().top;
         if (sectionTop < triggerBottom) {
             section.style.opacity = 1;
-            section.style.transform = 'translateY(0)';
+            section.style.transform
+section.style.transform = 'translateY(0)';
             section.style.transition = 'all 0.8s ease-out';
         }
     });
@@ -361,3 +331,4 @@ fadeInSections();
 
 </body>
 </html>
+        
