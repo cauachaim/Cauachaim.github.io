@@ -7,7 +7,7 @@
     <style>
         /* Fonte e cores principais */
         :root {
-            --primary-color: #4a90e2; /* azul agradável */
+            --primary-color: #1f3b70; /* azul mais sério */
             --background-color: #f5f7fa;
             --text-color: #333;
             --header-color: #1a1a1a;
@@ -72,6 +72,8 @@
             object-fit: cover;
             margin-bottom: 20px;
             border: 4px solid var(--primary-color);
+            max-width: 100%;
+            height: auto;
         }
 
         #about h2 {
@@ -154,6 +156,7 @@
             flex-wrap: wrap;
             gap: 20px;
             margin-bottom: 20px;
+            justify-content: center;
         }
 
         .project-images figure {
@@ -166,12 +169,15 @@
             max-width: 300px;
             border-radius: 12px;
             object-fit: cover;
+            max-width: 100%;
+            height: auto;
         }
 
         /* Vídeos */
         video {
             border-radius: 12px;
             max-width: 100%;
+            height: auto;
         }
 
         figure figcaption {
@@ -197,6 +203,7 @@
             display: flex;
             justify-content: center;
             gap: 30px;
+            flex-wrap: wrap;
         }
 
         #contact a {
@@ -204,11 +211,15 @@
             font-weight: bold;
             color: var(--primary-color);
             font-size: 18px;
-            transition: color 0.3s;
+            transition: all 0.3s;
+            padding: 10px 20px;
+            border: 2px solid var(--primary-color);
+            border-radius: 8px;
         }
 
         #contact a:hover {
-            color: #1d3f73;
+            background: var(--primary-color);
+            color: #fff;
         }
 
         /* Footer */
@@ -256,14 +267,13 @@
 <section id="about">
     <img src="assets/images/IMG_20240913_202036_110.webp" alt="Cauã Chaim">
     <h2>Cauã Chaim</h2>
-    <p>Técnico em eletrônica, com experiência em programação, montagem de projetos eletrônicos e editor. Apaixonado por robótica e desenvolvimento de soluções práticas para desafios do dia a dia.</p>
+    <p>Técnico em eletrônica, com experiência em programação, montagem de projetos eletrônicos e edição e sempre em busca de encontrar soluções práticas para desafios do dia a dia.</p>
 </section>
 
 <!-- Projetos -->
 <section id="projects">
     <h2>Projetos de Robótica</h2>
 
-    <!-- Sub-seção Robótica -->
     <div class="project-section" id="robotics">
         <h3>Robótica - OBR 2024</h3>
         <p><strong>Liderei o grupo na Olimpíada Brasileira de Robótica (OBR)</strong>. A equipe Cyberdroids foi a única em 2024 de Campos dos Goytacazes a passar para a fase estadual. O projeto foi construído com kits LEGO (Spike/EV3), sensores infravermelhos e programação em <strong>Arduino (EV3 / NXT / Spike)</strong>.</p>
@@ -373,3 +383,4 @@ fadeInSections();
 
 </body>
 </html>
+                    
