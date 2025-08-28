@@ -24,39 +24,37 @@
 
         /* Header */
 header {
+/* Header */
+header {
     background-color: var(--primary-color);
     color: #fff;
-    padding: 20px;
-    position: sticky; /* 🔹 Fica fixo no topo ao rolar */
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    padding: 30px 20px 20px;
+    text-align: center; /* 🔹 Centraliza tudo */
 }
 
 header h1 {
     margin: 0;
-    font-size: 26px;
+    font-size: 32px;
     color: #fff;
     letter-spacing: 1px;
 }
 
-/* Navbar links */
+/* Navbar links centralizados */
 nav.links ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 15px 0 0;
     display: flex;
-    gap: 20px;
+    justify-content: center; /* 🔹 Centraliza a linha */
+    gap: 25px; /* Espaço entre os links */
 }
 
 nav.links ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    font-size: 15px;
-    padding: 8px 16px;
+    font-size: 16px;
+    padding: 8px 14px;
     border-radius: 20px;
     transition: background 0.3s, color 0.3s;
 }
@@ -68,13 +66,11 @@ nav.links ul li a:hover {
 
 /* Mobile */
 @media(max-width:768px){
-    header {
-        flex-direction: column;
-        gap: 10px;
-    }
     nav.links ul {
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: column; /* 🔹 Empilha no celular */
+        gap: 12px;
+    }
+}
     }
 }
         }
@@ -320,4 +316,5 @@ nav.links ul li a:hover {
     </script>
 </body>
 </html>
+
 
