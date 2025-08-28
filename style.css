@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-x: hidden;
+}
+a.tombol{
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 0.2rem 1rem;
+    border-radius: 20px;
+    transition: .2s ease-in-out;
+    border: 1px solid white;
+    font-weight: 500;
+}
+a.tombol:hover{
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+a.menu{
+    color: white;
+    font-weight: 400;
+}
+.bungkus{
+    width: 100%;
+    height: auto;
+    padding-bottom: 3rem;
+    background-color: black;
+    background-repeat:no-repeat;
+
+background-position:center;
+    background-image: url("./asset/bg.png");
+}
+.navbar-toggler-icon {
+    border: none; /* Warna border garis tiga */
+  }
+  .judul{
+    margin-top: 4rem;
+    width: 80%;
+    color: white;
+  }
+  .des{
+    width: 80%;
+  }
+  .start a{
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-weight: 500;
+  }
+  .gambar img{
+    width: 120px;
+  }
+  /* services */
+  .services{
+  padding-bottom: 3rem;
+    width: 100%;
+    background-color: white;
+  }
+  .kartu{
+    background-color: #F4F4F4 ;
+    padding: 1.5rem 2rem;
+    height: 300px;
+    border-radius: 20px;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+
+  }
+  p.kartu-judul{
+    margin-top: 3rem;
+    color: black;
+    font-weight: 500;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    transition: .2s ease-in-out;
+  }
+
+  .icon-dalam{
+    font-size: 23px;
+    color: white;
+    background-color: black;
+    padding: 1rem;
+    border-radius: 50%;
+    transition: .2s ease-in-out;
+  }
+  .kartu:hover .icon-dalam {
+    color: black;
+    background-color: white;
+  }
+  .kartu:hover .kartu-judul {
+    color: white;
+  }
+  .kartu:hover{
+    background-color: black;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  .kartu:hover ~ .kartu-judul{
+    
+    color: white;
+  }
+  /* about us */
+  .aboutUs{
+    height: auto;
+    padding-bottom: 3rem;
+    width: 100%;
+    background-color: black;
+  }
+  /* about us */
+  /* proses */
+  .proses{
+    height: auto;
+    padding-bottom: 3rem;
+    width: 100%;
+  }
+
+  .kartu2{
+    background-color: #F4F4F4 ;
+    padding: 1.5rem 2rem;
+    height: 270px;
+    border-radius: 20px;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+    position: relative;
+
+  }
+  p.kartu-judul2{
+    margin-top: 3rem;
+    color: black;
+    font-weight: 500;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    transition: .2s ease-in-out;
+  }
+
+  .icon-dalam2{
+    top: -30px;
+    right: 95px;
+    position: absolute;
+    font-size: 40px;
+    color: white;
+    background-color: black;
+    padding: 1rem;
+    border-radius: 50%;
+    transition: .2s ease-in-out;
+  }
+  .kartu2:hover .icon-dalam2 {
+    color: black;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  .kartu2:hover .kartu-judul2 {
+    color: white;
+  }
+  .kartu2:hover{
+    background-color: black;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  .kartu2:hover ~ .kartu-judul2{
+    
+    color: white;
+  }
+  .atas{
+    cursor: pointer;
+    transition: .2s ease-in-out;
+  }
+  .atas:hover {
+    transform: scale(1.1); /* Atur faktor skala sesuai kebutuhan (misalnya, 1.2 untuk zoom 20%) */
+    transition: transform 0.2s ease-in-out; /* Menambahkan efek transisi untuk efek zoom yang lebih halus */
+  }
+  /* proses */
+  /* /user */
+  .kartu-user{
+    padding: 2rem 1rem;
+    background-color: #DFDFDF;
+    border-radius: 20px;
+  }
+.user{
+  height: auto;
+  width: 100%;
+  padding-bottom: 3rem;
+}
+
+  /* /user */
+  .footerweb{
+    height: auto;
+    padding-bottom: 3rem;
+    background-color: black;
+  }
+  .kanan-search a{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+  }
+  .search{
+    margin-top: 2rem;
+    display: flex;
+    padding: 0.8rem 1rem;
+    border-radius: 50px;
+    justify-content: space-between;
+    background-color: white;
+  }
+  .search input{
+    background-color: none;
+    border: none;
+  }
+@media (max-width: 768px) {
+    /* Tambahkan aturan CSS untuk layar laptop di sini */
+ .tombol{
+    margin-top: 1rem;
+ }
+}
