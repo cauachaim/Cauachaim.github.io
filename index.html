@@ -1,112 +1,240 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <title>Cauã Chaim - Portfólio</title>
     <style>
+        /* Fonte e cores principais */
         :root {
-            --primary-color: #4a90e2;
-            --secondary-color: #e8f0fc;
+            --primary-color: #4a90e2; /* azul agradável */
+            --background-color: #f5f7fa;
             --text-color: #333;
             --header-color: #1a1a1a;
             --card-bg: #fff;
         }
 
-        /* Reset básico */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Arial', sans-serif; line-height: 1.6; background: var(--secondary-color); color: var(--text-color); scroll-behavior: smooth; }
-
-        /* Navbar fixa */
-        header {
-            position: fixed;
-            width: 100%;
-            background: var(--primary-color);
-            color: #fff;
-            padding: 20px 0;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            background-color: var(--background-color);
+            color: var(--text-color);
         }
-        header h1 { text-align: center; font-size: 28px; }
-        nav.links { margin-top: 10px; }
-        nav.links ul { display: flex; justify-content: center; gap: 25px; list-style: none; }
-        nav.links ul li a { color: #fff; text-decoration: none; font-weight: bold; transition: color 0.3s; }
-        nav.links ul li a:hover { color: #dcefff; }
 
-        /* Seções */
-        section { padding: 100px 20px 80px; min-height: 100vh; opacity: 0; transform: translateY(50px); transition: all 0.8s ease-out; }
-        #about { background: var(--secondary-color); text-align: center; }
-        #projects { background: #f5f7fa; }
-        #contact { background: var(--secondary-color); text-align: center; }
+        /* Header */
+        header {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 60px 20px 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+            font-size: 40px;
+        }
+
+        nav.links ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        nav.links ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        nav.links ul li a:hover {
+            color: #dcefff;
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 20px;
+        }
 
         /* Sobre */
+        #about {
+            text-align: center;
+        }
+
         #about img {
-            width: 180px; height: 180px;
             border-radius: 50%;
-            border: 4px solid var(--primary-color);
+            width: 180px;
+            height: 180px;
             object-fit: cover;
             margin-bottom: 20px;
-            transition: transform 0.3s;
+            border: 4px solid var(--primary-color);
         }
-        #about img:hover { transform: scale(1.05); }
-        #about h2 { font-size: 32px; margin-bottom: 15px; color: var(--header-color); }
-        #about p { max-width: 650px; margin: 0 auto; font-size: 18px; line-height: 1.6; }
+
+        #about h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        #about p {
+            max-width: 650px;
+            margin: 0 auto;
+            font-size: 18px;
+            line-height: 1.6;
+        }
 
         /* Projetos */
-        #projects h2 { text-align: center; font-size: 32px; margin-bottom: 50px; color: var(--header-color); }
+        #projects {
+            background-color: #e8f0fc;
+        }
+
+        #projects h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 50px;
+            color: var(--header-color);
+        }
+
         .project-section, .post {
-            background: var(--card-bg);
+            background-color: var(--card-bg);
             border-radius: 12px;
             padding: 25px;
             margin-bottom: 40px;
             box-shadow: 0 6px 15px rgba(0,0,0,0.1);
             transition: transform 0.3s, box-shadow 0.3s;
         }
-        .project-section:hover, .post:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(0,0,0,0.15); }
-        .project-section h3 { font-size: 28px; margin-bottom: 15px; color: var(--primary-color); }
-        .project-section h4 { font-size: 20px; margin: 20px 0 10px; color: var(--primary-color); }
-        .project-section p, .post p { font-size: 16px; line-height: 1.5; margin-bottom: 15px; }
-        .project-section ul, .post ul { list-style: disc; padding-left: 20px; }
-        .project-section a, .post a { color: var(--primary-color); text-decoration: none; }
-        .project-section a:hover, .post a:hover { text-decoration: underline; }
 
-        /* Grid de imagens */
-        .project-images {
-            display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-bottom: 20px;
+        .project-section:hover, .post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
         }
-        .project-images figure { flex: 1 1 200px; text-align: center; }
-        .project-images img { width: 100%; max-width: 300px; border-radius: 12px; object-fit: cover; }
-        video { border-radius: 12px; max-width: 100%; }
 
-        figure figcaption { margin-top: 8px; font-size: 14px; color: #555; }
+        .project-section h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .project-section h4 {
+            font-size: 20px;
+            margin: 20px 0 10px 0;
+            color: var(--primary-color);
+        }
+
+        .project-section p, .post p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .project-section ul, .post ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+
+        .project-section ul li, .post ul li {
+            margin-bottom: 8px;
+        }
+
+        .project-section a, .post a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .project-section a:hover, .post a:hover {
+            text-decoration: underline;
+        }
+
+        /* Imagens de projetos */
+        .project-images {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .project-images figure {
+            flex: 1 1 200px;
+            text-align: center;
+        }
+
+        .project-images img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+
+        /* Vídeos */
+        video {
+            border-radius: 12px;
+            max-width: 100%;
+        }
+
+        figure figcaption {
+            margin-top: 8px;
+            font-size: 14px;
+            color: #555;
+        }
 
         /* Contato */
-        #contact h2 { font-size: 32px; margin-bottom: 40px; color: var(--header-color); }
-        #contact ul { list-style: none; display: flex; justify-content: center; gap: 30px; padding: 0; }
+        #contact {
+            text-align: center;
+        }
+
+        #contact h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: var(--header-color);
+        }
+
+        #contact ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
         #contact a {
             text-decoration: none;
             font-weight: bold;
             color: var(--primary-color);
             font-size: 18px;
-            padding: 10px 20px;
-            border: 2px solid var(--primary-color);
-            border-radius: 8px;
-            transition: all 0.3s;
+            transition: color 0.3s;
         }
+
         #contact a:hover {
-            background: var(--primary-color);
-            color: #fff;
+            color: #1d3f73;
         }
 
         /* Footer */
-        footer { text-align: center; padding: 25px 0; background: var(--primary-color); color: #fff; }
-        footer a { color: #fff; text-decoration: underline; }
+        footer {
+            text-align: center;
+            padding: 25px 0;
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: underline;
+        }
 
         /* Responsivo */
         @media(max-width:768px){
-            nav.links ul { flex-direction: column; gap: 15px; }
-            .project-images { flex-direction: column; align-items: center; }
+            .project-images {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav.links ul {
+                flex-direction: column;
+                gap: 15px;
+            }
         }
     </style>
 </head>
@@ -128,16 +256,17 @@
 <section id="about">
     <img src="assets/images/IMG_20240913_202036_110.webp" alt="Cauã Chaim">
     <h2>Cauã Chaim</h2>
-    <p>Técnico em eletrônica com experiência em programação, montagem de projetos eletrônicos e edição. Apaixonado por robótica, desenvolvimento de soluções criativas e aprendizado contínuo.</p>
+    <p>Técnico em eletrônica, com experiência em programação, montagem de projetos eletrônicos e editor. Apaixonado por robótica e desenvolvimento de soluções práticas para desafios do dia a dia.</p>
 </section>
 
 <!-- Projetos -->
 <section id="projects">
     <h2>Projetos de Robótica</h2>
 
+    <!-- Sub-seção Robótica -->
     <div class="project-section" id="robotics">
         <h3>Robótica - OBR 2024</h3>
-        <p><strong>Liderei a equipe Cyberdroids na Olimpíada Brasileira de Robótica (OBR)</strong>, única equipe de Campos dos Goytacazes a avançar para a fase estadual em 2024. Construído com kits LEGO (Spike/EV3), sensores infravermelhos e programação em <strong>Arduino (EV3 / NXT / Spike)</strong>.</p>
+        <p><strong>Liderei o grupo na Olimpíada Brasileira de Robótica (OBR)</strong>. A equipe Cyberdroids foi a única em 2024 de Campos dos Goytacazes a passar para a fase estadual. O projeto foi construído com kits LEGO (Spike/EV3), sensores infravermelhos e programação em <strong>Arduino (EV3 / NXT / Spike)</strong>.</p>
 
         <h4>📸 Fotos da competição</h4>
         <div class="project-images">
@@ -169,15 +298,27 @@
 
         <h4>📰 Notícias</h4>
         <p><a href="https://portal1.iff.edu.br/nossos-campi/campos-guarus/noticias/equipe-de-robotica-do-iff-guarus-conquista-vaga-na-etapa-regional-da-olimpiada-brasileira-de-robotica" target="_blank">Notícia sobre a OBR 2024</a></p>
+
+        <h4>⚙️ Funcionalidades</h4>
+        <ul>
+            <li>Seguidor de linha com sensor óptico</li>
+            <li>Desvio de obstáculos</li>
+            <li>Estrutura modular com LEGO</li>
+            <li>Programação em Spike</li>
+        </ul>
+
+        <h4>🏆 Objetivo</h4>
+        <p>Participar da <strong>OBR 2024</strong>, testando habilidades de programação, eletrônica e montagem de robôs.</p>
     </div>
 
+    <!-- Outros Projetos -->
     <article class="post">
         <h3>Workshop de Robótica</h3>
         <figure>
-            <img src="assets/images/Screenshot_2025-08-27-21-37-49-614_com.instagram.android~2.jpg" alt="Workshop Robótica">
-            <figcaption>Ministrando oficina de robótica para iniciantes</figcaption>
+            <img src="assets/images/Screenshot_2025-08-27-21-37-49-614_com.instagram.android~2.jpg" alt="Apresentando o mundo da robótica para crianças">
+            <figcaption>Ministrando oficina de robótica</figcaption>
         </figure>
-        <p>Construção e programação de robôs seguidores de linha para estudantes iniciantes, utilizando sensores infravermelhos e controle de motores.</p>
+        <p>Construção e programação de robôs seguidores de linha para estudantes iniciantes, com sensores infravermelhos e controle de motores.</p>
     </article>
 </section>
 
@@ -187,7 +328,7 @@
     <ul>
         <li><a href="mailto:caua.gui.chaim@gmail.com">Email</a></li>
         <li><a href="https://www.linkedin.com/in/seulinkedin" target="_blank">LinkedIn</a></li>
-        <li><a href="https://github.com/seuusuario" target="_blank">GitHub</a></li>
+        <li><a href="https://github.com/seuusuario" target="_blank">Github</a></li>
     </ul>
 </section>
 
@@ -198,21 +339,36 @@
 
 <!-- Scripts JS -->
 <script>
-    // Fade-in das seções
-    const sections = document.querySelectorAll('section, .project-section, .post');
-    const options = { threshold: 0.15 };
+document.querySelectorAll('nav.links a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
+    });
+});
 
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if(entry.isIntersecting){
-                entry.target.style.opacity = 1;
-                entry.target.style.transform = 'translateY(0)';
-                observer.unobserve(entry.target);
-            }
-        });
-    }, options);
+// Fade-in das seções
+const sections = document.querySelectorAll('section, .project-section, .post');
 
-    sections.forEach(section => observer.observe(section));
+sections.forEach(section => {
+    section.style.opacity = 0;
+    section.style.transform = 'translateY(50px)';
+});
+
+function fadeInSections() {
+    const triggerBottom = window.innerHeight * 0.85;
+    sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        if (sectionTop < triggerBottom) {
+            section.style.opacity = 1;
+            section.style.transform = 'translateY(0)';
+            section.style.transition = 'all 0.8s ease-out';
+        }
+    });
+}
+
+window.addEventListener('scroll', fadeInSections);
+fadeInSections();
 </script>
 
 </body>
