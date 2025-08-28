@@ -228,6 +228,46 @@ video {
 }
 
 /* ---------- CONTATO ---------- */
+.logo-contato {
+  width: 100px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+.contact-cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.contact-card {
+  background: var(--card-bg);
+  padding: 20px 30px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: bold;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-card img {
+  width: 28px;
+  height: 28px;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.7);
+  background: var(--primary);
+  color: #fff;
+}
+    
 #contact {
   text-align: center;
   padding: 80px 20px;
@@ -379,15 +419,32 @@ footer {
   <p class="video-caption">Desenvolvimento do projeto, simulação da pálpebra </p>
 </div>
 
-  </section>  <!-- Contato -->  <section id="contact" class="hidden">
-    <h2>Contato</h2>
-    <ul>
-      <li><a href="mailto:caua.gui.chaim@gmail.com">Email</a></li>
-      <li><a href="https://www.linkedin.com/in/seulinkedin" target="_blank">LinkedIn</a></li>
-      <li><a href="https://www.instagram.com/chg.caua" target="_blank">Instagram</a></li>
-    </ul>
-  </section>  <!-- Footer -->  <footer>
-    &copy; 2025 Cauã Chaim. Todos os direitos reservados.
+  <section id="contact" class="hidden">
+  <h2>Contato</h2>
+  <img src="assets/images/logo.png" alt="Logo Cauã Chaim" class="logo-contato"> <!-- Sua logo -->
+
+  <div class="contact-cards">
+    <a href="mailto:caua.gui.chaim@gmail.com" target="_blank" class="contact-card">
+      <img src="assets/icons/email.png" alt="Email">
+      <span>Email</span>
+    </a>
+    <a href="https://www.linkedin.com/in/seulinkedin" target="_blank" class="contact-card">
+      <img src="assets/icons/linkedin.png" alt="LinkedIn">
+      <span>LinkedIn</span>
+    </a>
+    <a href="https://www.instagram.com/chg.caua" target="_blank" class="contact-card">
+      <img src="assets/icons/instagram.png" alt="Instagram">
+      <span>Instagram</span>
+    </a>
+  </div>
+</section>
+  </section>  <!-- Footer -->  
+  <footer>
+  &copy; 2025 Cauã Chaim. Todos os direitos reservados.
+  <p style="margin-top:10px; font-size:14px; color:#66aaff; font-style:italic;">
+    “O Senhor é a minha luz e a minha salvação; a quem temerei?” – Salmos 27:1 ✨
+  </p>
+</footer>
    <!-- Script animações -->
   <script>
     
@@ -412,6 +469,7 @@ document.querySelectorAll('nav a, .btn-hero').forEach(link => {
   </script>
 </body>
 </html>
+
 
 
 
