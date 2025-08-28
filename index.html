@@ -127,12 +127,18 @@ section#about {
 }
 
 .projects-cards {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  margin-bottom: 60px;
+  display: flex;            /* mantém flexbox */
+  justify-content: center;  /* centraliza os cards */
+  gap: 30px;                /* espaço entre eles */
+  flex-wrap: wrap;          /* quebra linha em telas pequenas */
+  align-items: flex-start;  /* alinha topo dos cards */
 }
+
+.projects-cards .card {
+  flex: 1 1 300px;  /* largura mínima 300px e cresce se tiver espaço */
+  max-width: 400px; /* largura máxima */
+}
+
 
 .projects-cards .card {
   background: var(--card-bg);
@@ -469,6 +475,7 @@ document.querySelectorAll('nav a, .btn-hero').forEach(link => {
   </script>
 </body>
 </html>
+
 
 
 
