@@ -1,334 +1,562 @@
-<!DOCTYPE HTML>
-<html lang="pt-BR">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <title>Cauã Chaim - Portfólio</title>
-    <style>
-        :root {
-            --primary-color: #0d1a33; /* Azul bem forte */
-            --background-color: #f5f7fa;
-            --text-color: #333;
-            --card-bg: #fff;
-        }
 
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            line-height: 1.6;
-            background-color: var(--background-color);
-            color: var(--text-color);
-        }
+<!DOCTYPE HTML><html lang="pt-BR"><head><meta charset="utf-8" />
 
-        /* Header */
-        header {
-            background-color: var(--primary-color);
-            color: #fff;
-            padding: 60px 20px;
-            text-align: center;
-        }
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-        header h1 {
-            font-size: 42px;
-            margin-bottom: 15px;
-        }
+<title>Cauã Chaim - Portfólio</title>
 
-        header p {
-            font-size: 20px;
-            margin-bottom: 25px;
-        }
+<style>
 
-        nav.links ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
+    body {
 
-        nav.links ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 16px;
-            transition: color 0.3s;
-        }
+        font-family: Arial, sans-serif;
 
-        nav.links ul li a:hover {
-            color: #dcefff;
-        }
+        margin: 0;
 
-        /* Sobre */
-        #about {
-            text-align: center;
-            padding: 60px 20px;
-        }
+        line-height: 1.6;
 
-        #about img {
-            width: 220px;
-            height: 220px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid var(--primary-color);
-            margin-bottom: 20px;
-        }
+        background-color: #f9f9f9;
 
-        #about h2 {
-            font-size: 32px;
-            margin-bottom: 15px;
-        }
+        color: #333;
 
-        #about p {
-            font-size: 20px;
-            max-width: 650px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
+    }
 
-        /* Projetos */
-        #projects h2 {
-            text-align: center;
-            font-size: 32px;
-            margin-bottom: 50px;
-            color: var(--primary-color);
-        }
 
-        .project-section, .post {
-            background-color: var(--card-bg);
-            border-radius: 12px;
-            padding: 25px;
-            margin-bottom: 40px;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
 
-        .project-section:hover, .post:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-        }
+    header {
 
-        .project-section h3 {
-            font-size: 28px;
-            margin-bottom: 15px;
-            color: var(--primary-color);
-        }
+        background-color: #222;
 
-        .project-section h4 {
-            font-size: 20px;
-            margin: 20px 0 10px 0;
-            color: var(--primary-color);
-        }
+        color: #fff;
 
-        .project-section p, .post p {
-            font-size: 18px;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
+        padding: 60px 20px 40px 20px;
 
-        .project-section ul, .post ul {
-            list-style: disc;
-            padding-left: 20px;
-        }
+        text-align: center;
 
-        .project-section ul li, .post ul li {
-            margin-bottom: 8px;
-            font-size: 18px;
-        }
+    }
 
-        .project-section a, .post a {
-            color: var(--primary-color);
-            text-decoration: none;
-        }
 
-        .project-section a:hover, .post a:hover {
-            text-decoration: underline;
-        }
+
+    header h1 {
+
+        margin-bottom: 10px;
+
+        font-size: 36px;
+
+    }
+
+
+
+    nav.links ul {
+
+        list-style: none;
+
+        padding: 0;
+
+        display: flex;
+
+        justify-content: center;
+
+        gap: 30px;
+
+    }
+
+
+
+    nav.links ul li a {
+
+        color: #fff;
+
+        text-decoration: none;
+
+        font-weight: bold;
+
+    }
+
+
+
+    section {
+
+        padding: 50px 20px;
+
+    }
+
+
+
+    #about img {
+
+        border-radius: 50%;
+
+        width: 180px;
+
+        height: 180px;
+
+        object-fit: cover;
+
+        margin-bottom: 20px;
+
+    }
+
+
+
+    #about h2 {
+
+        font-size: 28px;
+
+        margin-bottom: 15px;
+
+        text-align: center;
+
+    }
+
+
+
+    #about p {
+
+        max-width: 600px;
+
+        margin: 0 auto;
+
+        font-size: 18px;
+
+        text-align: center;
+
+    }
+
+
+
+    #projects {
+
+        background-color: #f4f4f4;
+
+    }
+
+
+
+    #projects h2 {
+
+        text-align: center;
+
+        font-size: 28px;
+
+        margin-bottom: 40px;
+
+    }
+
+
+
+    .post, .project-section {
+
+        background-color: #fff;
+
+        border-radius: 10px;
+
+        padding: 25px;
+
+        margin-bottom: 40px;
+
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+    }
+
+
+
+    .post img, .project-images img {
+
+        width: 100%;
+
+        max-width: 300px;
+
+        border-radius: 10px;
+
+        object-fit: cover;
+
+    }
+
+
+
+    .project-images {
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 20px;
+
+        margin-bottom: 20px;
+
+    }
+
+
+
+    .project-images figure {
+
+        flex: 1 1 200px;
+
+        text-align: center;
+
+    }
+
+
+
+    .project-section h3 {
+
+        font-size: 26px;
+
+        margin-bottom: 15px;
+
+    }
+
+
+
+    .project-section h4 {
+
+        font-size: 20px;
+
+        margin: 20px 0 10px 0;
+
+    }
+
+
+
+    .project-section p, .post p {
+
+        font-size: 16px;
+
+        line-height: 1.5;
+
+        margin-bottom: 15px;
+
+    }
+
+
+
+    .project-section ul, .post ul {
+
+        list-style: disc;
+
+        padding-left: 20px;
+
+    }
+
+
+
+    .project-section ul li, .post ul li {
+
+        margin-bottom: 8px;
+
+    }
+
+
+
+    .project-section a, .post a {
+
+        color: #0077b5;
+
+        text-decoration: none;
+
+    }
+
+
+
+    .project-section a:hover, .post a:hover {
+
+        text-decoration: underline;
+
+    }
+
+
+
+    #contact ul {
+
+        list-style: none;
+
+        padding: 0;
+
+        display: flex;
+
+        justify-content: center;
+
+        gap: 20px;
+
+    }
+
+
+
+    #contact a {
+
+        text-decoration: none;
+
+        font-weight: bold;
+
+        color: #222;
+
+    }
+
+
+
+    #contact a:hover {
+
+        color: #0077b5;
+
+    }
+
+
+
+    footer {
+
+        text-align: center;
+
+        padding: 20px 0;
+
+        background-color: #222;
+
+        color: #fff;
+
+    }
+
+
+
+    footer a {
+
+        color: #fff;
+
+        text-decoration: none;
+
+    }
+
+
+
+    @media(max-width:768px){
 
         .project-images {
-            display: flex;
+
             flex-direction: column;
-            gap: 20px;
-            margin-bottom: 20px;
+
+            align-items: center;
+
         }
 
-        .project-images img {
-            width: 100%;
-            border-radius: 12px;
-            object-fit: cover;
-        }
+    }
 
-        figure figcaption {
-            margin-top: 8px;
-            font-size: 18px; /* legenda maior */
-            color: #555;
-            text-align: center;
-        }
+</style>
 
-        video {
-            border-radius: 12px;
-            max-width: 100%;
-        }
+</head><body><!-- Header --><header><h1>Cauã Chaim</h1>
 
-        /* Contato */
-        #contact h2 {
-            font-size: 32px;
-            margin-bottom: 40px;
-            text-align: center;
-            color: var(--primary-color);
-        }
+<nav class="links">
 
-        #contact ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-
-        #contact a {
-            text-decoration: none;
-            font-weight: bold;
-            color: var(--primary-color);
-            font-size: 18px;
-            transition: color 0.3s;
-        }
-
-        #contact a:hover {
-            color: #1d3f73;
-        }
-
-        footer {
-            text-align: center;
-            padding: 25px 0;
-            background-color: var(--primary-color);
-            color: #fff;
-        }
-
-        footer a {
-            color: #fff;
-            text-decoration: underline;
-        }
-
-        @media(max-width:900px){
-            nav.links ul {
-                flex-direction: column;
-                gap: 15px;
-            }
-        }
-    </style>
-</head>
-<body>
-
-<!-- Header -->
-<header>
-    <h1>Cauã Chaim</h1>
-    <p>Sempre em busca de soluções práticas para o dia a dia.</p>
-    <nav class="links">
-        <ul>
-            <li><a href="#about">Sobre</a></li>
-            <li><a href="#projects">Projetos</a></li>
-            <li><a href="#contact">Contato</a></li>
-        </ul>
-    </nav>
-</header>
-
-<!-- Sobre -->
-<section id="about">
-    <img src="assets/images/IMG_20240913_202036_110.webp" alt="Cauã Chaim">
-    <h2>Cauã Chaim</h2>
-    <p>Técnico em eletrônica, com experiência em programação, montagem de projetos eletrônicos e editor. Sempre em busca de soluções práticas para o dia a dia.</p>
-</section>
-
-<!-- Projetos -->
-<section id="projects">
-    <h2>Projetos de Robótica e Eletrônicos</h2>
-
-    <!-- Robótica -->
-    <div class="project-section">
-        <h3>Robótica - OBR 2024</h3>
-        <p><strong>Liderei o grupo na Olimpíada Brasileira de Robótica (OBR)</strong>. A equipe Cyberdroids foi a única em 2024 de Campos dos Goytacazes a passar para a fase estadual. O projeto foi construído com kits LEGO (Spike/EV3), sensores infravermelhos e programação em <strong>Arduino (EV3 / NXT / Spike)</strong>.</p>
-
-        <h4>📸 Fotos da competição</h4>
-        <div class="project-images">
-            <figure>
-                <img src="https://github.com/user-attachments/assets/cc6fb3e6-77ac-425a-94a7-b35f48483496" alt="OBR Regional">
-                <figcaption>OBR Regional</figcaption>
-            </figure>
-            <figure>
-                <img src="https://github.com/user-attachments/assets/86419447-b528-4f01-bdba-3a796b720d4f" alt="OBR Estadual">
-                <figcaption>OBR Estadual</figcaption>
-            </figure>
-        </div>
-    </div>
-
-    <!-- Projetos Eletrônicos -->
-    <div class="project-section">
-        <h3>Projetos Eletrônicos - Mike Walsalsk</h3>
-        <p>Construção do Mike Walsalsk simulando a pálpebra abrir e fechar com sensor de proximidade e relé, além de controle do LED baseado na iluminação.</p>
-
-        <h4>📸 Fotos do projeto</h4>
-        <div class="project-images">
-            <figure>
-                <img src="assets/images/mike1.jpg" alt="Mike Walsalsk visão frontal">
-                <figcaption>Mike Walsalsk - Frente</figcaption>
-            </figure>
-            <figure>
-                <img src="assets/images/mike2.jpg" alt="Mike Walsalsk close sensor">
-                <figcaption>Sensor de proximidade e relé</figcaption>
-            </figure>
-        </div>
-    </div>
-</section>
-
-<!-- Contato -->
-<section id="contact">
-    <h2>Contato</h2>
     <ul>
-        <li><a href="mailto:caua.gui.chaim@gmail.com">Email</a></li>
-        <li><a href="https://www.linkedin.com/in/seulinkedin" target="_blank">LinkedIn</a></li>
-        <li><a href="https://github.com/seuusuario" target="_blank">Github</a></li>
+
+        <li><a href="#projects">Projetos</a></li>
+
+        <li><a href="#about">Sobre</a></li>
+
+        <li><a href="#contact">Contato</a></li>
+
     </ul>
-</section>
 
-<footer>
-    &copy; 2025 Cauã Chaim. Design adaptado de <a href="http://html5up.net" target="_blank">HTML5 UP</a>.
-</footer>
+</nav>
 
-<!-- Scripts JS -->
-<script>
+</header><!-- Sobre --><section id="about"><img src="assets/images/IMG_20240913_202036_110.webp" alt="Cauã Chaim">
+
+<h2>Cauã Chaim</h2>
+
+<p>Técnico em eletrônica, com experiência em programação, montagem de projetos eletrônicos e editor </p>
+
+</section><!-- Projetos --><section id="projects"><h2>Projetos de Robótica</h2>
+
+
+
+<!-- Sub-seção Robótica -->
+
+<div class="project-section" id="robotics">
+
+    <h3>Robótica - OBR 2024</h3>
+
+    <p><strong>Liderei o grupo na Olimpíadas Brasileira de Robótica (OBR)</strong>. A equipe Cyberdroids foi a única em 2024 de Campos dos Goytacazes a passar para fase estadual. O projeto foi construído utilizando peças do kit LEGO, apropriado para uso,como spike ou EV3, com sensores infravermelhos e controle de motores  e controlado por programação em <strong>Arduino (EV3 / NXT / Spike)</strong>.</p>
+
+
+
+    <h4>📸 Fotos da competição</h4>
+
+    <div class="project-images">
+
+        <figure>
+
+            <img src="https://github.com/user-attachments/assets/cc6fb3e6-77ac-425a-94a7-b35f48483496" alt="OBR Regional">
+
+            <figcaption>OBR Regional</figcaption>
+
+        </figure>
+
+        <figure>
+
+            <img src="https://github.com/user-attachments/assets/86419447-b528-4f01-bdba-3a796b720d4f" alt="OBR Estadual">
+
+            <figcaption>OBR Estadual</figcaption>
+
+        </figure>
+
+    </div>
+
+
+
+    <h4>🎥 Vídeos</h4>
+
+    <ul>
+
+       <figure style="text-align:center; margin-bottom:20px;">
+
+  <video width="100%" max-width="600px" controls><source src="assets/images/VID-20250827-WA0004.mp4" type="video/mp4">
+
+Seu navegador não suporta vídeo.
+
+  </video>  <figcaption>Vídeo 1 - Robô na competição OBR 2024</figcaption></figure> <figure style="text-align:center; margin-bottom:20px;">
+
+  <video width="100%" max-width="600px" controls><source src="assets/images/VID-20240711-WA0044~2.mp4" type="video/mp4">
+
+Seu navegador não suporta vídeo.
+
+  </video>  <figcaption>Vídeo 2 - Teste de percurso </figcaption></figure>    </ul><h4>📰 Notícias</h4>
+
+    <p><a href="https://portal1.iff.edu.br/nossos-campi/campos-guarus/noticias/equipe-de-robotica-do-iff-guarus-conquista-vaga-na-etapa-regional-da-olimpiada-brasileira-de-robotica" target="_blank">Notícia sobre a OBR 2024</a></p>
+
+
+
+    <h4>⚙️ Funcionalidades</h4>
+
+    <ul>
+
+        <li>Seguidor de linha com sensor óptico</li>
+
+        <li>Desvio de obstáculos</li>
+
+        <li>Estrutura modular com LEGO</li>
+
+        <li>Programação em Spike</li>
+
+    </ul>
+
+
+
+    <h4>🏆 Objetivo</h4>
+
+    <p>Participar da <strong>OBR 2024</strong>, testando habilidades de programação, eletrônica e montagem de robôs.</p>
+
+</div>
+
+
+
+<!-- Outros Projetos -->
+
+<article class="post"
+
+    <header>
+
+        <div class="title">
+
+            <h3>Ministrando workshop de robótica para estudantes iniciantes. </h3>
+
+            
+
+        </div>
+
+    </header>
+
+    <a href="#" class=><img src="assets/images/Screenshot_2025-08-27-21-37-49-614_com.instagram.android~2.jpg" alt="Apresentando o mundo da robótica para crianças" /></a>
+
+    <p>Construção e programação de um robô seguidor de linha com sensores infravermelhos e controle de motores.</p>
+
+</article>
+
+</section><!-- Contato --><section id="contact"><h2>Contato</h2>
+
+<ul>
+
+    <li><a href="mailto:caua.gui.chaim@gmail.com">Email</a></li>
+
+    <li><a href="https://www.linkedin.com/in/seulinkedin" target="_blank">LinkedIn</a></li>
+
+    <li><a href="https://github.com/seuusuario" target="_blank">Github</a></li>
+
+</ul>
+
+</section><!-- Footer --><footer>&copy; 2025 Cauã Chaim. Design adaptado de <a href="http://html5up.net" target="_blank">HTML5 UP</a>.
+
+</footer><!-- Scripts JS --><script>
+  
+// Rolagem suave ao clicar nos links do menu
+  
 document.querySelectorAll('nav.links a').forEach(link => {
+  
     link.addEventListener('click', function(e) {
+  
         e.preventDefault();
+  
         const target = document.querySelector(this.getAttribute('href'));
-        if (target) target.scrollIntoView({ behavior: 'smooth' });
-    });
-});
-
-// Fade-in das seções
-const sections = document.querySelectorAll('section, .project-section, .post');
-sections.forEach(section => {
-    section.style.opacity = 0;
-    section.style.transform = 'translateY(50px)';
-});
-function fadeInSections() {
-    const triggerBottom = window.innerHeight * 0.85;
-    sections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
-        if (sectionTop < triggerBottom) {
-            section.style.opacity = 1;
-            section.style.transform
-section.style.transform = 'translateY(0)';
-            section.style.transition = 'all 0.8s ease-out';
+  
+        if (target) {
+  
+            target.scrollIntoView({ behavior: 'smooth' });
+  
         }
+  
     });
+  
+});
+  
+
+  
+// Fade-in das seções ao rolar
+  
+const sections = document.querySelectorAll('section, .project-section, .post');
+  
+
+  
+function fadeInSections() {
+  
+    const triggerBottom = window.innerHeight * 0.85;
+  
+    sections.forEach(section => {
+  
+        const sectionTop = section.getBoundingClientRect().top;
+  
+        if (sectionTop < triggerBottom) {
+  
+            section.style.opacity = 1;
+  
+            section.style.transform = 'translateY(0)';
+  
+            section.style.transition = 'all 0.8s ease-out';
+  
+        }
+  
+    });
+  
 }
+  
 
+  
+// Inicialmente deixa todas as seções escondidas
+  
+sections.forEach(section => {
+  
+    section.style.opacity = 0;
+  
+    section.style.transform = 'translateY(50px)';
+  
+});
+  
+
+  
+// Evento de scroll
+  
 window.addEventListener('scroll', fadeInSections);
-fadeInSections();
-</script>
+  
 
-</body>
-</html>
-        
+  
+// Chama uma vez para exibir se já estiver visível
+  
+fadeInSections();
+  
+</script></body></html>
