@@ -9,6 +9,7 @@
       --light: #f5f7fa;
       --dark: #1a1a1a;
       --card-bg: #fff;
+      --accent: #0077ff;
     }* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
@@ -31,18 +32,17 @@ header.hero {
               url("assets/images/IMG_20240913_202036_110.webp") no-repeat center/cover;
   color: #fff;
   padding: 60px 20px;
+  animation: fadeIn 1.5s ease forwards;
 }
 
 header.hero h1 {
   font-size: 2.8rem;
   margin-bottom: 15px;
-  animation: fadeInDown 1s ease forwards;
 }
 
 header.hero p {
   font-size: 1.2rem;
   margin-bottom: 30px;
-  animation: fadeInUp 1.5s ease forwards;
 }
 
 .btn-hero {
@@ -53,11 +53,11 @@ header.hero p {
   font-weight: bold;
   text-decoration: none;
   transition: all 0.3s;
-  animation: fadeInUp 2s ease forwards;
 }
 .btn-hero:hover {
   background: var(--primary);
   color: #fff;
+  transform: scale(1.05);
 }
 
 /* ---------- NAV ---------- */
@@ -78,7 +78,7 @@ nav a {
   font-weight: bold;
   transition: color 0.3s;
 }
-nav a:hover { color: #dcefff; }
+nav a:hover { color: var(--accent); }
 
 /* ---------- SOBRE ---------- */
 section#about {
@@ -89,6 +89,7 @@ section#about {
   padding: 80px 20px;
   flex-wrap: wrap;
   background: #e8f0fc;
+  animation: fadeInUp 1s ease forwards;
 }
 #about img {
   border-radius: 50%;
@@ -112,6 +113,16 @@ section#about {
   font-size: 34px;
   margin-bottom: 50px;
   color: var(--dark);
+  position: relative;
+}
+#projects h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--accent);
+  margin: 10px auto 0;
+  border-radius: 2px;
 }
 
 .projects-cards {
@@ -131,10 +142,11 @@ section#about {
   text-decoration: none;
   color: var(--dark);
   width: 300px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.4s, box-shadow 0.3s;
+  animation: float 3s ease-in-out infinite;
 }
 .projects-cards .card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-10px) scale(1.03);
   box-shadow: 0 12px 25px rgba(0,0,0,0.2);
 }
 .projects-cards .card img {
@@ -155,6 +167,7 @@ section#about {
   margin-bottom: 40px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
   transition: transform 0.3s, box-shadow 0.3s;
+  animation: fadeInUp 1s ease forwards;
 }
 .project-section:hover {
   transform: translateY(-5px);
@@ -164,14 +177,15 @@ section#about {
   font-size: 28px;
   margin-bottom: 15px;
   color: var(--primary);
+  text-align: center;
 }
 .project-section h4 {
-  font-size: 22px;
+  font-size: 20px;
   margin: 20px 0 10px;
   color: var(--primary);
 }
-.project-section p { font-size: 18px; margin-bottom: 15px; }
-.project-section ul { padding-left: 20px; }
+.project-section p { font-size: 16px; margin-bottom: 15px; line-height: 1.5; }
+.project-section ul { padding-left: 20px; font-size: 16px; }
 .project-section li { margin-bottom: 8px; }
 
 .project-images {
@@ -250,9 +264,13 @@ footer {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
-@keyframes fadeInDown {
-  from { opacity: 0; transform: translateY(-30px); }
-  to { opacity: 1; transform: translateY(0); }
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
 }
 
 .hidden { opacity: 0; transform: translateY(40px); transition: all 0.8s ease; }
@@ -297,7 +315,7 @@ footer {
       </a>
     </div>
   </section>  <!-- Robótica -->  <section id="projetos-robotica" class="hidden">
-    <h2>Projetos de Robótica</h2><div class="project-section">
+    <h2 style="text-align:center;">Projetos de Robótica</h2><div class="project-section">
   <h3>OBR 2024 - Desenvolvimento Técnico</h3>
   <p>Atuei na programação e integração do robô para a <strong>Olimpíada Brasileira de Robótica (OBR)</strong>, responsável pelo sistema de seguidor de linha utilizando sensores ópticos, lógica de desvio de obstáculos e ajustes de calibração. Também participei da montagem modular em LEGO, garantindo estabilidade e modularidade do chassi, além da programação em Spike para resposta em tempo real.</p>
 
@@ -328,8 +346,8 @@ footer {
 </div>
 
   </section>  <!-- Arduino -->  <section id="projetos-arduino" class="hidden">
-    <h2>Projetos com Arduino</h2>
-    <p>Nessa seção estão alguns dos meus projetos utilizando Arduino e componentes eletrônicos, explorando automação, sensores e integração com atuadores para criar soluções práticas e criativas.</p><div class="project-section">
+    <h2 style="text-align:center;">Projetos com Arduino</h2>
+    <p style="text-align:center; max-width:800px; margin:0 auto 40px; font-size:16px; line-height:1.5;">Nessa seção estão alguns dos meus projetos utilizando Arduino e componentes eletrônicos, explorando automação, sensores e integração com atuadores para criar soluções práticas e criativas.</p><div class="project-section">
   <h3>Projeto Mike Wazowski</h3>
   <p>Desenvolvimento de um protótipo inspirado no personagem Mike Wazowski, simulando aspectos da visão e expressividade:</p>
   <ul>
@@ -369,6 +387,4 @@ footer {
       });
     }
     window.addEventListener('scroll', showOnScroll);
-    showOnScroll();
-  </script></body>
-</html>
+   
