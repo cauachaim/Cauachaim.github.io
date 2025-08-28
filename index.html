@@ -1,177 +1,94 @@
 <!DOCTYPE html><html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cauã Chaim - Portfólio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- AOS Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  </head>
-  <body class="bg-white text-gray-900 font-sans">
-    <!-- Header -->
-    <header class="flex justify-between items-center max-w-5xl mx-auto p-6" data-aos="fade-down">
-      <h1 class="text-2xl font-bold">Cauã Chaim</h1>
-      <nav class="flex space-x-6 text-lg">
-        <a href="#about" class="hover:text-blue-600 transition">Sobre</a>
-        <a href="#projects" class="hover:text-blue-600 transition">Projetos</a>
-        <a href="#contact" class="hover:text-blue-600 transition">Contato</a>
-      </nav>
-    </header><!-- Hero -->
-<section class="max-w-5xl mx-auto text-center py-20 px-6" data-aos="fade-up">
-  <h2 class="text-4xl font-bold mb-4">Olá, eu sou o Cauã 👋</h2>
-  <p class="text-lg text-gray-600">
-    Técnico em eletrônica | Programação | Robótica & Projetos Web
-  </p>
-</section>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cauã Chaim – Portfólio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    a { transition: color 0.3s ease; }
+    a:hover { color: #2563eb; }
+    img { border-radius: 12px; }
+    video { border-radius: 12px; }
+  </style>
+</head>
+<body class="bg-white text-gray-800">  <div class="max-w-3xl mx-auto px-6 py-20"><!-- Header -->
+<header class="mb-20 text-center" data-aos="fade-up">
+  <h1 class="text-4xl font-light mb-4">Cauã Chaim</h1>
+  <p class="text-lg text-gray-600">Técnico em eletrônica, com experiência em programação, montagem de projetos eletrônicos e edição.</p>
+</header>
 
 <!-- Sobre -->
-<section id="about" class="max-w-5xl mx-auto py-20 px-6 text-center" data-aos="fade-up">
-  <img
-    src="assets/images/IMG_20240913_202036_110.webp"
-    alt="Cauã Chaim"
-    class="w-40 h-40 mx-auto rounded-full mb-6 border-4 border-blue-600 object-cover"
-  />
-  <h3 class="text-3xl font-semibold mb-4">Sobre mim</h3>
-  <p class="text-gray-700 max-w-2xl mx-auto leading-relaxed">
-    Técnico em eletrônica, com experiência em programação, montagem de
-    projetos eletrônicos e edição. Sempre em busca de soluções práticas para
-    desafios do dia a dia.
+<section id="about" class="mb-20 text-center" data-aos="fade-up">
+  <img src="assets/images/IMG_20240913_202036_110.webp" alt="Cauã Chaim" class="w-40 h-40 mx-auto mb-6 object-cover rounded-full border-4 border-blue-600">
+  <h2 class="text-2xl font-semibold mb-4">Sobre</h2>
+  <p class="text-gray-700 leading-relaxed">
+    Sempre em busca de soluções práticas para desafios do dia a dia.
   </p>
 </section>
 
 <!-- Projetos -->
-<section id="projects" class="max-w-5xl mx-auto py-20 px-6">
-  <h3 class="text-3xl font-semibold mb-10 text-center" data-aos="fade-up">Projetos</h3>
+<section id="projects" class="mb-20" data-aos="fade-up">
+  <h2 class="text-2xl font-semibold mb-6 text-center">Projetos</h2>
+  <ul class="space-y-8">
+    <!-- Robótica -->
+    <li>
+      <h3 class="text-xl font-medium mb-2">Robótica – OBR 2024</h3>
+      <p class="text-gray-700 mb-2">Liderei o grupo na Olimpíada Brasileira de Robótica (OBR). A equipe Cyberdroids foi a única em 2024 de Campos dos Goytacazes a passar para a fase estadual. O projeto foi construído com kits LEGO, sensores infravermelhos e programação em Arduino/Spike.</p>
+      <div class="grid md:grid-cols-2 gap-4 mb-2">
+        <figure>
+          <img src="https://github.com/user-attachments/assets/cc6fb3e6-77ac-425a-94a7-b35f48483496" alt="OBR Regional">
+          <figcaption class="text-sm text-gray-500 text-center mt-1">OBR Regional</figcaption>
+        </figure>
+        <figure>
+          <img src="https://github.com/user-attachments/assets/86419447-b528-4f01-bdba-3a796b720d4f" alt="OBR Estadual">
+          <figcaption class="text-sm text-gray-500 text-center mt-1">OBR Estadual</figcaption>
+        </figure>
+      </div>
+      <div class="grid md:grid-cols-2 gap-4 mb-2">
+        <figure>
+          <video controls>
+            <source src="assets/images/VID-20250827-WA0004.mp4" type="video/mp4">
+          </video>
+          <figcaption class="text-sm text-gray-500 text-center mt-1">Robô na competição OBR 2024</figcaption>
+        </figure>
+        <figure>
+          <video controls>
+            <source src="assets/images/VID-20240711-WA0044~2.mp4" type="video/mp4">
+          </video>
+          <figcaption class="text-sm text-gray-500 text-center mt-1">Teste de percurso</figcaption>
+        </figure>
+      </div>
+      <p class="text-blue-600 hover:underline"><a href="https://portal1.iff.edu.br/nossos-campi/campos-guarus/noticias/equipe-de-robotica-do-iff-guarus-conquista-vaga-na-etapa-regional-da-olimpiada-brasileira-de-robotica" target="_blank">Notícia sobre a OBR 2024</a></p>
+    </li>
 
-  <!-- Robótica -->
-  <div class="p-6 border rounded-2xl shadow hover:shadow-lg transition mb-10" data-aos="fade-up">
-    <h4 class="text-2xl font-semibold mb-4">Robótica - OBR 2024</h4>
-    <p class="text-gray-700 mb-6">
-      Liderei o grupo na Olimpíada Brasileira de Robótica (OBR). A equipe
-      Cyberdroids foi a única em 2024 de Campos dos Goytacazes a passar para
-      a fase estadual. O projeto foi construído com kits LEGO, sensores e
-      programação em Arduino/Spike.
-    </p>
-
-    <div class="grid md:grid-cols-2 gap-6 mb-6">
-      <figure data-aos="zoom-in">
-        <img
-          src="https://github.com/user-attachments/assets/cc6fb3e6-77ac-425a-94a7-b35f48483496"
-          alt="OBR Regional"
-          class="rounded-xl"
-        />
-        <figcaption class="text-sm text-gray-500 mt-2 text-center">
-          OBR Regional
-        </figcaption>
+    <!-- Workshop -->
+    <li>
+      <h3 class="text-xl font-medium mb-2">Workshop de Robótica</h3>
+      <p class="text-gray-700 mb-2">Construção e programação de robôs seguidores de linha para estudantes iniciantes, com sensores infravermelhos e controle de motores.</p>
+      <figure>
+        <img src="assets/images/Screenshot_2025-08-27-21-37-49-614_com.instagram.android~2.jpg" alt="Workshop de Robótica">
+        <figcaption class="text-sm text-gray-500 text-center mt-1">Ministrando oficina de robótica</figcaption>
       </figure>
-      <figure data-aos="zoom-in" data-aos-delay="150">
-        <img
-          src="https://github.com/user-attachments/assets/86419447-b528-4f01-bdba-3a796b720d4f"
-          alt="OBR Estadual"
-          class="rounded-xl"
-        />
-        <figcaption class="text-sm text-gray-500 mt-2 text-center">
-          OBR Estadual
-        </figcaption>
-      </figure>
-    </div>
-
-    <div class="grid md:grid-cols-2 gap-6 mb-6">
-      <figure data-aos="fade-right">
-        <video controls class="rounded-xl w-full">
-          <source src="assets/images/VID-20250827-WA0004.mp4" type="video/mp4" />
-        </video>
-        <figcaption class="text-sm text-gray-500 mt-2 text-center">
-          Robô na competição OBR 2024
-        </figcaption>
-      </figure>
-      <figure data-aos="fade-left">
-        <video controls class="rounded-xl w-full">
-          <source src="assets/images/VID-20240711-WA0044~2.mp4" type="video/mp4" />
-        </video>
-        <figcaption class="text-sm text-gray-500 mt-2 text-center">
-          Teste de percurso
-        </figcaption>
-      </figure>
-    </div>
-
-    <a
-      href="https://portal1.iff.edu.br/nossos-campi/campos-guarus/noticias/equipe-de-robotica-do-iff-guarus-conquista-vaga-na-etapa-regional-da-olimpiada-brasileira-de-robotica"
-      target="_blank"
-      class="text-blue-600 hover:underline"
-      data-aos="fade-up"
-      >Notícia sobre a OBR 2024</a
-    >
-
-    <ul class="list-disc pl-6 mt-6 text-gray-700" data-aos="fade-up">
-      <li>Seguidor de linha com sensor óptico</li>
-      <li>Desvio de obstáculos</li>
-      <li>Estrutura modular com LEGO</li>
-      <li>Programação em Spike</li>
-    </ul>
-  </div>
-
-  <!-- Workshop -->
-  <div class="p-6 border rounded-2xl shadow hover:shadow-lg transition" data-aos="fade-up">
-    <h4 class="text-2xl font-semibold mb-4">Workshop de Robótica</h4>
-    <figure>
-      <img
-        src="assets/images/Screenshot_2025-08-27-21-37-49-614_com.instagram.android~2.jpg"
-        alt="Apresentando o mundo da robótica"
-        class="rounded-xl mx-auto mb-4 max-w-sm"
-        data-aos="zoom-in"
-      />
-      <figcaption class="text-sm text-gray-500 text-center mb-4">
-        Ministrando oficina de robótica
-      </figcaption>
-    </figure>
-    <p class="text-gray-700">
-      Construção e programação de robôs seguidores de linha para estudantes
-      iniciantes, com sensores infravermelhos e controle de motores.
-    </p>
-  </div>
+    </li>
+  </ul>
 </section>
 
 <!-- Contato -->
-<section id="contact" class="max-w-5xl mx-auto py-20 px-6 text-center" data-aos="fade-up">
-  <h3 class="text-3xl font-semibold mb-6">Contato</h3>
-  <p class="text-gray-700 mb-4">
-    Tem interesse em colaborar comigo? Entre em contato:
-  </p>
-  <div class="flex justify-center gap-6 flex-wrap">
-    <a
-      href="mailto:caua.gui.chaim@gmail.com"
-      class="px-6 py-3 border border-blue-600 rounded-xl text-blue-600 hover:bg-blue-600 hover:text-white transition"
-      >Email</a
-    >
-    <a
-      href="https://www.linkedin.com/in/seulinkedin"
-      target="_blank"
-      class="px-6 py-3 border border-blue-600 rounded-xl text-blue-600 hover:bg-blue-600 hover:text-white transition"
-      >LinkedIn</a
-    >
-    <a
-      href="https://www.instagram.com/chg.caua?igsh=MW91NHlubW8zcXBkeg=="
-      target="_blank"
-      class="px-6 py-3 border border-blue-600 rounded-xl text-blue-600 hover:bg-blue-600 hover:text-white transition"
-      >Instagram</a
-    >
-  </div>
+<section id="contact" class="text-center mb-20" data-aos="fade-up">
+  <h2 class="text-2xl font-semibold mb-4">Contato</h2>
+  <p class="text-gray-700 mb-2">Tem interesse em colaborar comigo? Entre em contato:</p>
+  <p><a href="mailto:caua.gui.chaim@gmail.com" class="text-blue-600 hover:underline">caua.gui.chaim@gmail.com</a></p>
+  <p class="mt-2"><a href="https://www.linkedin.com/in/seulinkedin" target="_blank" class="text-blue-600 hover:underline">LinkedIn</a> | <a href="https://www.instagram.com/chg.caua?igsh=MW91NHlubW8zcXBkeg==" target="_blank" class="text-blue-600 hover:underline">Instagram</a></p>
 </section>
 
 <!-- Footer -->
-<footer class="text-center py-10 text-gray-500" data-aos="fade-up">
+<footer class="text-center text-sm text-gray-500" data-aos="fade-up">
   <p>© 2025 Cauã Chaim. Todos os direitos reservados.</p>
 </footer>
 
-<!-- Scripts -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 1000,
-    once: true,
-  });
-</script>
-
-  </body>
+  </div>  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  <script>
+    AOS.init({ duration: 800, once: true });
+  </script></body>
 </html>
