@@ -1,236 +1,109 @@
 <!DOCTYPE html><html lang="pt-BR">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <title>Cauã Chaim - Portfólio</title>
-  </head>
-  <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark pt-4 bg-dark">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img src="assets/images/logo.png" width="60" alt="Logo" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span><i class="fa-solid fa-bars" style="color: white"></i></span>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav me-5">
-            <li class="nav-item">
-              <a class="nav-link menu me-4" style="color: white" href="#about"
-                >Sobre</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link menu me-4" style="color: white" href="#projects"
-                >Projetos</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link menu" style="color: white" href="#contact"
-                >Contato</a
-              >
-            </li>
-          </ul>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <title>Cauã Chaim - Portfólio</title>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark py-3">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="assets/images/logo.png" width="70" alt="Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span><i class="fa-solid fa-bars" style="color:white;"></i></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav me-5">
+          <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projetos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>  <!-- Hero -->  <section class="hero py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-4 text-center" data-aos="fade-right">
+          <img src="assets/images/IMG_20240913_202036_110.webp" alt="Cauã Chaim" class="profile-photo rounded-circle">
+        </div>
+        <div class="col-lg-8" data-aos="fade-left">
+          <h1 class="mb-3">Cauã Chaim</h1>
+          <h4 class="text-muted">Técnico em Eletrônica</h4>
+          <p>Experiência em programação, montagem de projetos eletrônicos e desenvolvimento de websites. Focado em soluções práticas e criativas.</p>
+          <a href="#contact" class="btn btn-outline-primary mt-3">Entre em Contato</a>
         </div>
       </div>
-    </nav><!-- Hero -->
-<section class="hero container py-5">
-  <div class="row align-items-center">
-    <div class="col-lg-4 text-center" data-aos="fade-up">
-      <img
-        src="assets/images/IMG_20240913_202036_110.webp"
-        class="rounded-circle img-fluid"
-        style="width: 200px; height: 200px; object-fit: cover"
-        alt="Cauã Chaim"
-      />
     </div>
-    <div class="col-lg-8" data-aos="fade-left">
-      <h1>Olá, eu sou <span style="color: #64ccc5">Cauã Chaim</span></h1>
-      <p class="lead text-white">
-        Técnico em eletrônica com experiência em programação, montagem de
-        projetos eletrônicos e criação de websites.
-      </p>
-      <a href="#contact" class="btn btn-outline-light mt-3">Entre em Contato</a>
-    </div>
-  </div>
-</section>
-
-<!-- Sobre -->
-<section id="about" class="aboutUs">
-  <div class="container text-center">
-    <h2 class="text-white mb-4" data-aos="fade-up">Sobre Mim</h2>
-    <p class="text-white" data-aos="fade-up">
-      Tenho experiência em eletrônica, programação e robótica, com foco em
-      desenvolvimento de soluções criativas e funcionais. Participei de
-      competições de robótica e desenvolvi projetos em Arduino voltados para
-      automação.
-    </p>
-  </div>
-</section>
-
-<!-- Projetos -->
-<section id="projects" class="services py-5">
-  <div class="container">
-    <h2 class="text-center mb-5" data-aos="fade-up">Projetos</h2>
-    <div class="row justify-content-center">
-      <!-- Card Robótica -->
-      <div class="col-lg-5 col-md-6 mb-4" data-aos="fade-up">
-        <div class="kartu text-center p-4">
-          <div class="kartu-icon">
-            <i class="fa-solid fa-robot icon-dalam"></i>
+  </section>  <!-- Projetos Cards -->  <section id="projects" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5" data-aos="fade-up">Projetos</h2>
+      <div class="row g-4">
+        <!-- Card Robótica -->
+        <div class="col-md-6" data-aos="zoom-in">
+          <div class="card project-card h-100 text-center p-4">
+            <i class="fa-solid fa-robot fa-3x mb-3"></i>
+            <h4>Robótica</h4>
+            <p>Projetos desenvolvidos em competições e workshops de robótica.</p>
+            <a href="#robotica" class="btn btn-primary">Ver Mais</a>
           </div>
-          <h4 class="mt-3">Projetos de Robótica</h4>
-          <p>OBR 2024, vídeos de testes e workshop de robótica.</p>
-          <a href="#robotica" class="btn btn-outline-dark mt-3">Ver Detalhes</a>
         </div>
-      </div>
-      <!-- Card Eletrônica -->
-      <div class="col-lg-5 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="kartu text-center p-4">
-          <div class="kartu-icon">
-            <i class="fa-solid fa-microchip icon-dalam"></i>
+        <!-- Card Eletrônica -->
+        <div class="col-md-6" data-aos="zoom-in">
+          <div class="card project-card h-100 text-center p-4">
+            <i class="fa-solid fa-bolt fa-3x mb-3"></i>
+            <h4>Eletrônica</h4>
+            <p>Protótipos eletrônicos e automações com Arduino e microcontroladores.</p>
+            <a href="#eletronica" class="btn btn-primary">Ver Mais</a>
           </div>
-          <h4 class="mt-3">Projetos de Eletrônica</h4>
-          <p>Protótipos com Arduino e sistemas de automação.</p>
-          <a href="#eletronica" class="btn btn-outline-dark mt-3">Ver Detalhes</a>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- Robótica Detalhes -->
-<section id="robotica" class="proses py-5">
-  <div class="container">
-    <h2 class="text-center mb-5" data-aos="fade-up">Projetos de Robótica</h2>
-    <div class="kartu2 p-4 mb-5">
-      <h3>🤖 OBR 2024</h3>
-      <p>
-        <strong>Liderei o grupo na Olimpíada Brasileira de Robótica (OBR).</strong>
-        A equipe Cyberdroids foi a única em 2024 de Campos dos Goytacazes a
-        passar para a fase estadual.
-      </p>
-      <div class="d-flex flex-wrap gap-3 mb-3">
-        <figure>
-          <img
-            src="https://github.com/user-attachments/assets/cc6fb3e6-77ac-425a-94a7-b35f48483496"
-            class="img-fluid rounded"
-            alt="OBR Regional"
-          />
-          <figcaption>OBR Regional</figcaption>
-        </figure>
-        <figure>
-          <img
-            src="https://github.com/user-attachments/assets/86419447-b528-4f01-bdba-3a796b720d4f"
-            class="img-fluid rounded"
-            alt="OBR Estadual"
-          />
-          <figcaption>OBR Estadual</figcaption>
-        </figure>
-      </div>
-      <h5>Vídeos</h5>
-      <div class="mb-3">
-        <video controls class="w-100 rounded">
+  </section>  <!-- Seção Robótica -->  <section id="robotica" class="py-5 section-dark">
+    <div class="container">
+      <h3 class="mb-4" data-aos="fade-up">🤖 Projetos de Robótica</h3>
+      <div class="card p-4 mb-5" data-aos="fade-up">
+        <h4>OBR 2024</h4>
+        <p>Liderança na equipe Cyberdroids, única de Campos dos Goytacazes a chegar à fase estadual.</p>
+        <div class="d-flex flex-wrap gap-3 mb-3">
+          <img src="https://github.com/user-attachments/assets/cc6fb3e6-77ac-425a-94a7-b35f48483496" class="img-fluid rounded" alt="OBR Regional">
+          <img src="https://github.com/user-attachments/assets/86419447-b528-4f01-bdba-3a796b720d4f" class="img-fluid rounded" alt="OBR Estadual">
+        </div>
+        <h5>Vídeos</h5>
+        <video controls class="w-100 rounded mb-2">
           <source src="assets/images/VID-20250827-WA0004.mp4" type="video/mp4">
         </video>
-        <figcaption>Execução do robô na arena</figcaption>
-      </div>
-      <div class="mb-3">
         <video controls class="w-100 rounded">
           <source src="assets/images/VID-20240711-WA0044~2.mp4" type="video/mp4">
         </video>
-        <figcaption>Teste de linha e sensores</figcaption>
+      </div><div class="card p-4" data-aos="fade-up">
+    <h4>Workshop de Robótica</h4>
+    <img src="assets/images/Screenshot_2025-08-27-21-37-49-614_com.instagram.android~2.jpg" class="img-fluid rounded mb-2" alt="Workshop">
+    <p>Ministrei oficinas para iniciantes na construção e programação de seguidores de linha.</p>
+  </div>
+</div>
+
+  </section>  <!-- Seção Eletrônica -->  <section id="eletronica" class="py-5">
+    <div class="container">
+      <h3 class="mb-4" data-aos="fade-up">⚡ Projetos de Eletrônica</h3>
+      <div class="card p-4" data-aos="fade-up">
+        <h4>Protótipo de Automação com Arduino</h4>
+        <p>Desenvolvimento de sistemas automatizados com sensores e atuadores, aplicados em automação residencial e monitoramento.</p>
       </div>
     </div>
-    <div class="kartu2 p-4">
-      <h3>📚 Workshop de Robótica</h3>
-      <figure>
-        <img
-          src="assets/images/Screenshot_2025-08-27-21-37-49-614_com.instagram.android~2.jpg"
-          class="img-fluid rounded mb-2"
-          alt="Workshop"
-        />
-        <figcaption>Ministrando oficina de robótica</figcaption>
-      </figure>
-      <p>
-        Construção e programação de robôs seguidores de linha para estudantes iniciantes.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- Eletrônica Detalhes -->
-<section id="eletronica" class="proses py-5">
-  <div class="container">
-    <h2 class="text-center mb-5" data-aos="fade-up">Projetos de Eletrônica</h2>
-    <div class="kartu2 p-4">
-      <h3>⚡ Protótipo Automação com Arduino</h3>
-      <p>
-        Desenvolvimento de protótipos eletrônicos com sensores e atuadores
-        utilizando <strong>Arduino</strong> e microcontroladores. Aplicações
-        em automação residencial e sistemas de monitoramento.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- Contato -->
-<section id="contact" class="footerweb">
-  <div class="container text-center">
-    <h2 class="text-white" data-aos="fade-up">Contato</h2>
+  </section>  <!-- Contato -->  <section id="contact" class="py-5 section-dark text-center">
+    <h2 data-aos="fade-up">Contato</h2>
     <ul class="list-unstyled d-flex justify-content-center gap-3 mt-4">
-      <li>
-        <a href="mailto:caua.gui.chaim@gmail.com" class="btn btn-outline-light"
-          >Email</a
-        >
-      </li>
-      <li>
-        <a href="https://www.linkedin.com/in/seulinkedin" target="_blank" class="btn btn-outline-light"
-          >LinkedIn</a
-        >
-      </li>
-      <li>
-        <a href="https://www.instagram.com/chg.caua" target="_blank" class="btn btn-outline-light"
-          >Instagram</a
-        >
-      </li>
+      <li><a href="mailto:caua.gui.chaim@gmail.com" class="btn btn-outline-primary">Email</a></li>
+      <li><a href="https://www.linkedin.com/in/seulinkedin" target="_blank" class="btn btn-outline-primary">LinkedIn</a></li>
+      <li><a href="https://www.instagram.com/chg.caua" target="_blank" class="btn btn-outline-primary">Instagram</a></li>
     </ul>
-    <p class="text-white mt-5">
-      &copy; 2025 Cauã Chaim. Design adaptado de
-      <a
-        href="http://html5up.net"
-        target="_blank"
-        class="text-white text-decoration-underline"
-        >HTML5 UP</a
-      >.
-    </p>
-  </div>
-</section>
-
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-
-  </body>
+  </section>  <!-- Footer -->  <footer class="text-white py-4 text-center">
+    &copy; 2025 Cauã Chaim. Design adaptado de <a href="http://html5up.net" target="_blank" class="text-white text-decoration-underline">HTML5 UP</a>.
+  </footer>  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>  <script>AOS.init();</script>  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script></body>
 </html>
