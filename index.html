@@ -21,7 +21,7 @@ body {
 
 /* ---------- HERO ---------- */
 header.hero {
-  height: 100vh;
+  min-height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,17 +30,17 @@ header.hero {
   background: linear-gradient(rgba(18,50,91,0.8), rgba(18,50,91,0.8)),
               url("assets/images/IMG_20240913_202036_110.webp") no-repeat center/cover;
   color: #fff;
-  position: relative;
+  padding: 60px 20px;
 }
 
 header.hero h1 {
-  font-size: 3rem;
+  font-size: 2.8rem;
   margin-bottom: 15px;
   animation: fadeInDown 1s ease forwards;
 }
 
 header.hero p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin-bottom: 30px;
   animation: fadeInUp 1.5s ease forwards;
 }
@@ -191,10 +191,18 @@ section#about {
 
 video {
   border-radius: 12px;
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
   display: block;
   margin: 15px auto;
+}
+
+.video-caption {
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+  margin-top: -10px;
+  margin-bottom: 20px;
 }
 
 /* ---------- CONTATO ---------- */
@@ -255,6 +263,7 @@ footer {
   header.hero h1 { font-size: 2.2rem; }
   #about { flex-direction: column; text-align: center; }
   .project-images img { max-width: 90%; }
+  video { max-width: 95%; }
 }
 
   </style>
@@ -289,8 +298,8 @@ footer {
     </div>
   </section>  <!-- Robótica -->  <section id="projetos-robotica" class="hidden">
     <h2>Projetos de Robótica</h2><div class="project-section">
-  <h3>Robótica - OBR 2024</h3>
-  <p><strong>Liderei o grupo na Olimpíada Brasileira de Robótica (OBR)</strong>. A equipe Cyberdroids foi a única em 2024 de Campos dos Goytacazes a passar para a fase estadual.</p>
+  <h3>OBR 2024 - Desenvolvimento Técnico</h3>
+  <p>Atuei na programação e integração do robô para a <strong>Olimpíada Brasileira de Robótica (OBR)</strong>, responsável pelo sistema de seguidor de linha utilizando sensores ópticos, lógica de desvio de obstáculos e ajustes de calibração. Também participei da montagem modular em LEGO, garantindo estabilidade e modularidade do chassi, além da programação em Spike para resposta em tempo real.</p>
 
   <h4>📸 Fotos</h4>
   <div class="project-images">
@@ -302,31 +311,45 @@ footer {
   <video controls>
     <source src="assets/images/VID-20250827-WA0004.mp4" type="video/mp4">
   </video>
+  <p class="video-caption">Execução do robô em fase classificatória</p>
+
   <video controls>
     <source src="assets/images/VID-20240711-WA0044~2.mp4" type="video/mp4">
   </video>
-
-  <h4>⚙️ Funcionalidades</h4>
-  <ul>
-    <li>Seguidor de linha com sensor óptico</li>
-    <li>Desvio de obstáculos</li>
-    <li>Estrutura modular com LEGO</li>
-    <li>Programação em Spike</li>
-  </ul>
+  <p class="video-caption">Teste de calibração de sensores</p>
 </div>
 
 <div class="project-section">
   <h3>Workshop de Robótica</h3>
-  <img src="assets/images/Screenshot_2025-08-27-21-37-49-614_com.instagram.android~2.jpg" alt="Workshop" class="workshop-img">
-  <p>Construção e programação de robôs seguidores de linha para estudantes iniciantes, com sensores infravermelhos e motores.</p>
+  <div class="project-images">
+    <img src="assets/images/Screenshot_2025-08-27-21-37-49-614_com.instagram.android~2.jpg" alt="Workshop">
+  </div>
+  <p>Construção e programação de robôs seguidores de linha para estudantes iniciantes, utilizando sensores infravermelhos, motores DC e lógica embarcada.</p>
 </div>
 
   </section>  <!-- Arduino -->  <section id="projetos-arduino" class="hidden">
     <h2>Projetos com Arduino</h2>
-    <div class="project-section">
-      <h3>Exemplo de Projeto</h3>
-      <p>Aqui você pode adicionar seus projetos feitos com Arduino e componentes eletrônicos (ex: automação, sensores, displays, etc).</p>
-    </div>
+    <p>Nessa seção estão alguns dos meus projetos utilizando Arduino e componentes eletrônicos, explorando automação, sensores e integração com atuadores para criar soluções práticas e criativas.</p><div class="project-section">
+  <h3>Projeto Mike Wazowski</h3>
+  <p>Desenvolvimento de um protótipo inspirado no personagem Mike Wazowski, simulando aspectos da visão e expressividade:</p>
+  <ul>
+    <li><strong>Pálpebra:</strong> Controle de abertura e fechamento utilizando motor acionado por relé, ativado por sensor ultrassônico para simular percepção de presença.</li>
+    <li><strong>Iluminação:</strong> Variação de intensidade de LED e cores em módulo RGB, de acordo com a leitura de um sensor LDR.</li>
+    <li><strong>Controle:</strong> Toda a lógica embarcada implementada em Arduino, garantindo sincronização entre sensores e atuadores.</li>
+  </ul>
+
+  <h4>📸 Fotos</h4>
+  <div class="project-images">
+    <img src="assets/images/mike.jpg" alt="Projeto Mike Wazowski">
+  </div>
+
+  <h4>🎥 Vídeo</h4>
+  <video controls>
+    <source src="assets/images/mike-video.mp4" type="video/mp4">
+  </video>
+  <p class="video-caption">Demonstração do Mike Wazowski em funcionamento</p>
+</div>
+
   </section>  <!-- Contato -->  <section id="contact" class="hidden">
     <h2>Contato</h2>
     <ul>
