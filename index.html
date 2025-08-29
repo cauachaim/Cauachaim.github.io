@@ -6,7 +6,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-  --primary: #00275b;   /* royal bem escuro */
+  --primary: #0d1949;   /* royal bem escuro */
 --accent: #08306b;    /* tom profundo */
   --light: #0d1117;     /* fundo geral escuro */
   --dark: #e6edf3;      /* texto claro */
@@ -356,18 +356,7 @@ footer {
 </nav>
 
 <!-- Projetos -->
-<section id="projects" class="hidden">
-  <h2>Projetos</h2>
-  <div class="projects-cards">
-    <a href="#projetos-robotica" class="card">
-      <img src="assets/images/20240921_081018.jpg" alt="Robótica">
-      <h3>Projetos de Robótica</h3>
-    </a>
-    <a href="#projetos-arduino" class="card">
-      <img src="assets/images/IMG-20250828-WA0018.jpg" alt="Arduino">
-      <h3>Projetos com Arduino</h3>
-    </a>
-  </div>
+
 </section><!-- Hero -->  <header class="hero">
     <h1>Olá, eu sou Cauã Chaim e esse é meu portfólio🏆</h1>
     <p>Técnico em Eletrônica | Robótica | Programação| Editor </p>
@@ -392,16 +381,27 @@ footer {
     </a>
   </div>
 </section> 
-  
+  <section id="projects" class="hidden">
+  <h2>Projetos</h2>
+  <div class="projects-cards">
+    <a href="#projetos-robotica" class="card">
+      <img src="assets/images/20240921_081018.jpg" alt="Robótica">
+      <h3>Projetos de Robótica</h3>
+    </a>
+    <a href="#projetos-arduino" class="card">
+      <img src="assets/images/IMG-20250828-WA0018.jpg" alt="Arduino">
+      <h3>Projetos com Arduino</h3>
+    </a>
+  </div>
   </div>
 </section>
 
 
   
 <section id="projetos-robotica" class="hidden">
-  <h2 style="text-align:center;">Projetos de Robótica</h2>
   
   <div class="project-section">
+    <h3 style="text-align:center;">Projetos de Robótica</h3>
     <h3>OBR 2024 - Desenvolvimento Técnico</h3>
     <p><strong>Líder da única equipe da cidade de Campos dos Goytacazes a passar para a fase estadual em 2024.</strong> Atuei na programação e integração do robô para a <strong>Olimpíada Brasileira de Robótica (OBR)</strong>, sendo responsável pelo sistema de seguidor de linha com sensores ópticos, lógica de desvio de obstáculos e ajustes de calibração. Também participei da montagem modular em LEGO, garantindo estabilidade e modularidade do chassi, além da programação em Spike para resposta em tempo real.</p>
 
@@ -433,7 +433,7 @@ footer {
 
 
   </section>  <!-- Arduino -->  <section id="projetos-arduino" class="hidden">
-    <h2 style="text-align:center;">Projetos com Arduino</h2>
+    <h3 style="text-align:center;">Projetos com Arduino</h3>
     <p style="text-align:center; max-width:800px; margin:1 auto 40px; font-size:16px; line-height:1.5;">Nessa seção estão alguns dos meus projetos utilizando Arduino e componentes eletrônicos, explorando automação, sensores e integração com atuadores para criar soluções práticas e criativas.</p><div class="project-section">
   <h3>Projeto Mike Wazowski</h3>
   <p>Desenvolvimento de um protótipo inspirado no personagem Mike Wazowski, simulando aspectos da visão e expressividade:</p>
@@ -506,6 +506,7 @@ document.querySelectorAll('nav a, .btn-hero').forEach(link => {
   </script>
 </body>
 </html>
+
 
 
 
