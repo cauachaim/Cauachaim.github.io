@@ -106,6 +106,10 @@ section#about {
 
 /* ---------- PROJETOS ---------- */
 #projects {
+  padding-top: 80px;      /* espaço acima da seção */
+  scroll-margin-top: 80px; /* garante que o nav fixo não cubra a seção */
+}
+    #projects {
   padding: 80px 20px;
   background: var(--light);
 }
@@ -344,11 +348,27 @@ footer {
 </head>
 <body>
   <!-- Navegação -->
-  <nav>
-    <a href="#about">Sobre</a>
-    <a href="#projects">Projetos</a>
-    <a href="#contact">Contato</a>
-  </nav>  <!-- Hero -->  <header class="hero">
+<!-- Menu -->
+<nav>
+  <a href="#about">Sobre</a>
+  <a href="#projects">Projetos</a>
+  <a href="#contact">Contato</a>
+</nav>
+
+<!-- Projetos -->
+<section id="projects" class="hidden">
+  <h2>Projetos</h2>
+  <div class="projects-cards">
+    <a href="#projetos-robotica" class="card">
+      <img src="assets/images/20240921_081018.jpg" alt="Robótica">
+      <h3>Projetos de Robótica</h3>
+    </a>
+    <a href="#projetos-arduino" class="card">
+      <img src="assets/images/IMG-20250828-WA0018.jpg" alt="Arduino">
+      <h3>Projetos com Arduino</h3>
+    </a>
+  </div>
+</section><!-- Hero -->  <header class="hero">
     <h1>Olá, eu sou Cauã Chaim e esse é meu portfólio🏆</h1>
     <p>Técnico em Eletrônica | Robótica | Programação| Editor </p>
     <a href="#projects" class="btn-hero">Ver Projetos</a>
@@ -486,6 +506,7 @@ document.querySelectorAll('nav a, .btn-hero').forEach(link => {
   </script>
 </body>
 </html>
+
 
 
 
