@@ -80,7 +80,7 @@ section {
 section.details-section {
     min-height: auto;
     padding-bottom: 80px;
-    width: 100%; /* Garante que a seção ocupe toda a largura */
+    width: 100%;
 }
 #home {
     min-height: 100vh;
@@ -135,7 +135,7 @@ section h2 {
     align-items: center; 
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 1100px; /* Limita a largura do container Sobre */
+    max-width: 1100px;
 }
 .about-image { 
     flex: 1; 
@@ -181,46 +181,31 @@ section h2 {
 .summary-card p { color: var(--secondary-text-color); font-size: 15px; }
 
 /* Project Details Sections */
-/* ===== MUDANÇA ROBUSTA APLICADA AQUI ===== */
 .project-item { 
-    display: flex; 
-    flex-wrap: wrap; /* Permite que o conteúdo quebre em telas menores */
-    align-items: flex-start; /* Alinha os itens no topo */
-    gap: 40px; 
     width: 100%; 
     background-color: var(--card-bg-color); 
     padding: 30px; 
     border-radius: 15px; 
-    margin: 0 auto 40px auto; /* Centraliza e adiciona margem inferior */
-    max-width: 1200px; /* Limita a largura máxima do card */
+    margin: 0 auto 40px auto;
+    max-width: 1200px;
 }
-
-.project-description { 
-    flex: 2; /* Ocupa 2 partes do espaço */
-    min-width: 300px; /* Largura mínima para o texto */
+.project-media img, .project-media video { 
+    width: 100%; 
+    border-radius: 10px; 
 }
-.project-media { 
-    flex: 1; /* Ocupa 1 parte do espaço */
-    min-width: 300px; /* Largura mínima para a mídia */
-    display: grid; 
-    gap: 15px; 
-}
-/* ===== FIM DA MUDANÇA ROBUSTA ===== */
-
-.project-media img, .project-media video { width: 100%; border-radius: 10px; }
-.project-media h4 { color: var(--primary-color); font-size: 16px; margin-top: 10px; border-bottom: 1px solid #333; padding-bottom: 5px;}
+.project-media h4 { color: var(--primary-color); font-size: 16px; margin-top: 10px; border-bottom: 1px solid #333; padding-bottom: 5px; margin-bottom: 15px; }
 .project-description h3 { color: var(--primary-color); font-size: 28px; margin-bottom: 15px; }
 .project-description p { color: var(--secondary-text-color); margin-bottom: 15px; }
 .project-description p.highlight { color: var(--text-color); background-color: rgba(249, 24, 90, 0.1); padding: 10px; border-left: 3px solid var(--primary-color); border-radius: 5px; }
 .project-description ul { list-style-position: inside; padding-left: 10px; }
 .project-description li { margin-bottom: 10px; }
+
 .video-caption, .image-caption {
     text-align: center; 
     font-size: 14px; 
     color: #aaa; 
-    margin-top: -5px; 
+    margin-top: 5px; 
 }
-
 
 /* Certificates Section */
 .certificates-container { display: flex; gap: 30px; flex-wrap: wrap; justify-content: center; }
@@ -251,27 +236,18 @@ section h2 {
 /* Footer */
 footer { padding: 20px 10%; text-align: center; background: var(--bg-color); }
 
-
-/* Responsividade */
+/* Responsividade Geral */
 @media (max-width: 992px) {
     section { padding: 120px 5% 40px; }
-    /* Agora a quebra de linha é controlada pelo flex-wrap */
     .about-container { flex-direction: column; }
     .about-text { order: 1;}
     .about-image { order: 2; margin: 30px auto 0;}
 }
 
 @media (max-width: 768px) {
-    .logo {
-        font-size: 20px;
-    }
-    nav {
-        display: flex;
-    }
-    nav a {
-        margin-left: 10px;
-        font-size: 14px;
-    }
+    .logo { font-size: 20px; }
+    nav { display: flex; }
+    nav a { margin-left: 10px; font-size: 14px; }
     .home-content { flex-direction: column; }
     .text-content h1 { font-size: 40px; }
     .text-content h2 { font-size: 24px; }
@@ -281,11 +257,26 @@ footer { padding: 20px 10%; text-align: center; background: var(--bg-color); }
 }
 
 @media (max-width: 480px) {
-    .logo {
-        font-size: 18px;
+    .logo { font-size: 18px; }
+    nav a { margin-left: 8px; font-size: 12px; }
+}
+
+/* ===== NOVO LAYOUT PARA DESKTOP ===== */
+@media (min-width: 993px) {
+    .project-item {
+        /* No desktop, o .project-item já é block por padrão, então não precisa mudar. */
+        /* Apenas garantimos um espaço entre a descrição e a mídia */
+        .project-description {
+            margin-bottom: 30px;
+        }
     }
-    nav a {
-        margin-left: 8px;
-        font-size: 12px;
+    .media-row {
+        display: flex; /* Coloca os itens da fileira lado a lado */
+        gap: 20px; /* Espaço entre os itens */
+        margin-bottom: 20px; /* Espaço entre as fileiras de mídia */
+    }
+    .media-item {
+        flex: 1; /* Faz cada item ocupar metade do espaço */
+        min-width: 0; /* Prevenção de bug do flexbox */
     }
 }
