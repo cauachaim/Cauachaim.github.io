@@ -80,6 +80,7 @@ section {
 section.details-section {
     min-height: auto;
     padding-bottom: 80px;
+    width: 100%; /* Garante que a seção ocupe toda a largura */
 }
 #home {
     min-height: 100vh;
@@ -134,6 +135,7 @@ section h2 {
     align-items: center; 
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 1100px; /* Limita a largura do container Sobre */
 }
 .about-image { 
     flex: 1; 
@@ -142,8 +144,7 @@ section h2 {
 }
 .about-text { 
     flex: 1.5; 
-    min-width: 300px; 
-    max-width: 600px;
+    min-width: 300px;
 }
 .about-image img { width: 100%; border-radius: 15px; box-shadow: 0 0 20px rgba(249, 24, 90, 0.5); }
 .about-text h3 { font-size: 28px; margin-bottom: 10px; }
@@ -159,6 +160,7 @@ section h2 {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
     width: 100%;
+    max-width: 1200px;
 }
 .summary-card {
     background: var(--card-bg-color);
@@ -179,26 +181,34 @@ section h2 {
 .summary-card p { color: var(--secondary-text-color); font-size: 15px; }
 
 /* Project Details Sections */
-/* ===== MUDANÇA PRINCIPAL AQUI ===== */
+/* ===== MUDANÇA ROBUSTA APLICADA AQUI ===== */
 .project-item { 
     display: flex; 
-    align-items: center; 
+    flex-wrap: wrap; /* Permite que o conteúdo quebre em telas menores */
+    align-items: flex-start; /* Alinha os itens no topo */
     gap: 40px; 
     width: 100%; 
     background-color: var(--card-bg-color); 
     padding: 30px; 
     border-radius: 15px; 
-    margin-bottom: 40px;
-    max-width: 1200px;      /* Adicionado: Limita a largura máxima em telas grandes */
-    margin-left: auto;      /* Adicionado: Centraliza o card quando o limite é atingido */
-    margin-right: auto;     /* Adicionado: Centraliza o card quando o limite é atingido */
+    margin: 0 auto 40px auto; /* Centraliza e adiciona margem inferior */
+    max-width: 1200px; /* Limita a largura máxima do card */
 }
-/* ===== FIM DA MUDANÇA ===== */
 
-.project-media { flex: 1; min-width: 300px; display: grid; gap: 15px; }
+.project-description { 
+    flex: 2; /* Ocupa 2 partes do espaço */
+    min-width: 300px; /* Largura mínima para o texto */
+}
+.project-media { 
+    flex: 1; /* Ocupa 1 parte do espaço */
+    min-width: 300px; /* Largura mínima para a mídia */
+    display: grid; 
+    gap: 15px; 
+}
+/* ===== FIM DA MUDANÇA ROBUSTA ===== */
+
 .project-media img, .project-media video { width: 100%; border-radius: 10px; }
 .project-media h4 { color: var(--primary-color); font-size: 16px; margin-top: 10px; border-bottom: 1px solid #333; padding-bottom: 5px;}
-.project-description { flex: 1.5; min-width: 300px; }
 .project-description h3 { color: var(--primary-color); font-size: 28px; margin-bottom: 15px; }
 .project-description p { color: var(--secondary-text-color); margin-bottom: 15px; }
 .project-description p.highlight { color: var(--text-color); background-color: rgba(249, 24, 90, 0.1); padding: 10px; border-left: 3px solid var(--primary-color); border-radius: 5px; }
@@ -221,7 +231,7 @@ section h2 {
 .certificate-card .overlay h3 { color: #fff; font-size: 20px;}
 
 /* Contact Section */
-.contact-container { display: flex; width: 100%; background: var(--card-bg-color); border-radius: 10px; overflow: hidden; flex-wrap: wrap; }
+.contact-container { display: flex; width: 100%; background: var(--card-bg-color); border-radius: 10px; overflow: hidden; flex-wrap: wrap; max-width: 1200px; }
 .contact-info, .contact-form { padding: 40px; flex: 1; min-width: 300px; }
 .contact-info h3 { font-size: 28px; margin-bottom: 15px; }
 .contact-info p { color: var(--secondary-text-color); margin-bottom: 20px; }
@@ -243,10 +253,10 @@ footer { padding: 20px 10%; text-align: center; background: var(--bg-color); }
 
 
 /* Responsividade */
-
 @media (max-width: 992px) {
     section { padding: 120px 5% 40px; }
-    .project-item, .about-container { flex-direction: column; }
+    /* Agora a quebra de linha é controlada pelo flex-wrap */
+    .about-container { flex-direction: column; }
     .about-text { order: 1;}
     .about-image { order: 2; margin: 30px auto 0;}
 }
