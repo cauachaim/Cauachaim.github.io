@@ -128,9 +128,23 @@ section h2 {
 .buttons .view-work:hover { background: var(--primary-color); color: #fff; }
 
 /* About Section */
-.about-container { display: flex; gap: 50px; align-items: center; flex-wrap: wrap; }
-.about-image { flex: 1; min-width: 280px; }
-.about-text { flex: 1.5; min-width: 300px; }
+.about-container { 
+    display: flex; 
+    gap: 50px; 
+    align-items: center; 
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    justify-content: center; /* Centraliza os itens quando quebram */
+}
+.about-image { 
+    flex: 1; 
+    min-width: 280px; 
+    max-width: 400px; /* Limita o tamanho máximo da imagem */
+}
+.about-text { 
+    flex: 1.5; 
+    min-width: 300px; 
+    max-width: 600px; /* Limita o tamanho máximo do texto */
+}
 .about-image img { width: 100%; border-radius: 15px; box-shadow: 0 0 20px rgba(249, 24, 90, 0.5); }
 .about-text h3 { font-size: 28px; margin-bottom: 10px; }
 .about-text p { color: var(--secondary-text-color); margin-bottom: 20px; }
@@ -175,7 +189,7 @@ section h2 {
 .project-description p.highlight { color: var(--text-color); background-color: rgba(249, 24, 90, 0.1); padding: 10px; border-left: 3px solid var(--primary-color); border-radius: 5px; }
 .project-description ul { list-style-position: inside; padding-left: 10px; }
 .project-description li { margin-bottom: 10px; }
-.video-caption, .image-caption { /* ESTILO ADICIONADO AQUI */
+.video-caption, .image-caption {
     text-align: center; 
     font-size: 14px; 
     color: #aaa; 
@@ -217,9 +231,11 @@ footer { padding: 20px 10%; text-align: center; background: var(--bg-color); }
 
 @media (max-width: 992px) {
     section { padding: 120px 5% 40px; }
-    .project-item, .about-container { flex-direction: column; }
-    .about-text { order: 1;}
-    .about-image { order: 2; margin: 30px auto 0;}
+    .project-item { flex-direction: column; } /* Projetos ainda quebram */
+    /* Remove a ordem para a imagem e texto da seção About para que eles possam fluir normalmente */
+    .about-text, .about-image { order: unset; margin: unset; }
+    /* Adiciona margem inferior ao texto quando a imagem for para baixo */
+    .about-text { margin-bottom: 30px; }
 }
 
 @media (max-width: 768px) {
