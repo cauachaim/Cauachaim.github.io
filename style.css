@@ -132,18 +132,18 @@ section h2 {
     display: flex; 
     gap: 50px; 
     align-items: center; 
-    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
-    justify-content: center; /* Centraliza os itens quando quebram */
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .about-image { 
     flex: 1; 
     min-width: 280px; 
-    max-width: 400px; /* Limita o tamanho máximo da imagem */
+    max-width: 400px;
 }
 .about-text { 
     flex: 1.5; 
     min-width: 300px; 
-    max-width: 600px; /* Limita o tamanho máximo do texto */
+    max-width: 600px;
 }
 .about-image img { width: 100%; border-radius: 15px; box-shadow: 0 0 20px rgba(249, 24, 90, 0.5); }
 .about-text h3 { font-size: 28px; margin-bottom: 10px; }
@@ -179,7 +179,22 @@ section h2 {
 .summary-card p { color: var(--secondary-text-color); font-size: 15px; }
 
 /* Project Details Sections */
-.project-item { display: flex; align-items: center; gap: 40px; width: 100%; background-color: var(--card-bg-color); padding: 30px; border-radius: 15px; margin-bottom: 40px;}
+/* ===== MUDANÇA PRINCIPAL AQUI ===== */
+.project-item { 
+    display: flex; 
+    align-items: center; 
+    gap: 40px; 
+    width: 100%; 
+    background-color: var(--card-bg-color); 
+    padding: 30px; 
+    border-radius: 15px; 
+    margin-bottom: 40px;
+    max-width: 1200px;      /* Adicionado: Limita a largura máxima em telas grandes */
+    margin-left: auto;      /* Adicionado: Centraliza o card quando o limite é atingido */
+    margin-right: auto;     /* Adicionado: Centraliza o card quando o limite é atingido */
+}
+/* ===== FIM DA MUDANÇA ===== */
+
 .project-media { flex: 1; min-width: 300px; display: grid; gap: 15px; }
 .project-media img, .project-media video { width: 100%; border-radius: 10px; }
 .project-media h4 { color: var(--primary-color); font-size: 16px; margin-top: 10px; border-bottom: 1px solid #333; padding-bottom: 5px;}
@@ -231,11 +246,9 @@ footer { padding: 20px 10%; text-align: center; background: var(--bg-color); }
 
 @media (max-width: 992px) {
     section { padding: 120px 5% 40px; }
-    .project-item { flex-direction: column; } /* Projetos ainda quebram */
-    /* Remove a ordem para a imagem e texto da seção About para que eles possam fluir normalmente */
-    .about-text, .about-image { order: unset; margin: unset; }
-    /* Adiciona margem inferior ao texto quando a imagem for para baixo */
-    .about-text { margin-bottom: 30px; }
+    .project-item, .about-container { flex-direction: column; }
+    .about-text { order: 1;}
+    .about-image { order: 2; margin: 30px auto 0;}
 }
 
 @media (max-width: 768px) {
