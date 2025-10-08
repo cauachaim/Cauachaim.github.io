@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Efeito de digitação na seção Home
     new Typed('.typing-text', {
-        strings: ['Técnico em Eletrônica', 'Programador', 'Líder de Robótica', 'Criativo'],
+        strings: ['Técnico em Eletrônica', 'Programador', 'editor', 'designer'],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
