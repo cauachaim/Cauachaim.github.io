@@ -269,7 +269,7 @@ footer { padding: 20px 10%; text-align: center; background: var(--bg-color); }
     nav a { margin-left: 8px; font-size: 12px; }
 }
 
-/* ===== NOVO LAYOUT HÍBRIDO PARA DESKTOP ===== */
+/* ===== LAYOUT HÍBRIDO PARA DESKTOP ===== */
 @media (min-width: 993px) {
     /* Regra para o layout padrão de 2 colunas (ex: Site Confeitaria) */
     .project-item {
@@ -291,11 +291,8 @@ footer { padding: 20px 10%; text-align: center; background: var(--bg-color); }
     .project-item.layout-stacked .project-description {
         margin-bottom: 30px;
     }
-    .project-item.layout-stacked .project-media {
-        max-width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-    }
+    
+    /* A REGRA QUE DIMINUÍA AS IMAGENS FOI REMOVIDA DAQUI */
 
     .media-row {
         display: flex;
