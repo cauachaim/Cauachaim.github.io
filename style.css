@@ -183,7 +183,8 @@ section h2 {
 /* Project Details Sections */
 .project-item { 
     display: flex;
-    flex-direction: column; /* Layout padrão para mobile: empilhado */
+    flex-direction: column; 
+    gap: 30px; /* ADICIONADO PARA CORRIGIR SOBREPOSIÇÃO NO CELULAR */
     width: 100%; 
     background-color: var(--card-bg-color); 
     padding: 30px; 
@@ -271,7 +272,6 @@ footer { padding: 20px 10%; text-align: center; background: var(--bg-color); }
 
 /* ===== LAYOUT HÍBRIDO PARA DESKTOP ===== */
 @media (min-width: 993px) {
-    /* Regra para o layout padrão de 2 colunas (ex: Site Confeitaria) */
     .project-item {
         flex-direction: row;
         align-items: center;
@@ -284,12 +284,18 @@ footer { padding: 20px 10%; text-align: center; background: var(--bg-color); }
         flex: 1;
     }
 
-    /* Regra APENAS para os projetos que devem ter texto em cima */
     .project-item.layout-stacked {
         display: block;
     }
     .project-item.layout-stacked .project-description {
         margin-bottom: 30px;
+    }
+
+    /* ADICIONADO PARA DIMINUIR UM POUCO AS IMAGENS NO DESKTOP */
+    .project-item.layout-stacked .project-media {
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .media-row {
