@@ -182,6 +182,8 @@ section h2 {
 
 /* Project Details Sections */
 .project-item { 
+    display: flex;
+    flex-direction: column;
     width: 100%; 
     background-color: var(--card-bg-color); 
     padding: 30px; 
@@ -190,16 +192,17 @@ section h2 {
     max-width: 1000px;
 }
 
-/* CORREÇÃO PARA IMAGEM VAZANDO NO CELULAR */
 .project-media {
-    min-width: 0; /* ADICIONADO PARA CORREÇÃO */
+    min-width: 0;
 }
-
 .project-media img, .project-media video { 
     width: 100%; 
     border-radius: 10px; 
 }
 .project-media h4 { color: var(--primary-color); font-size: 16px; margin-top: 10px; border-bottom: 1px solid #333; padding-bottom: 5px; margin-bottom: 15px; }
+.project-description {
+    width: 100%;
+}
 .project-description h3 { color: var(--primary-color); font-size: 28px; margin-bottom: 15px; }
 .project-description p { color: var(--secondary-text-color); margin-bottom: 15px; }
 .project-description p.highlight { color: var(--text-color); background-color: rgba(249, 24, 90, 0.1); padding: 10px; border-left: 3px solid var(--primary-color); border-radius: 5px; }
@@ -233,8 +236,8 @@ section h2 {
 .contact-btn.email:hover { background-color: #EA4335; color: #fff; transform: scale(1.05); }
 .contact-btn.linkedin { border-color: #0A66C2; color: #0A66C2; }
 .contact-btn.linkedin:hover { background-color: #0A66C2; color: #fff; transform: scale(1.05); }
-.contact-btn.instagram { border-color: #E440F; color: #E440F; }
-.contact-btn.instagram:hover { background-color: #E440F; color: #fff; transform: scale(1.05); }
+.contact-btn.instagram { border-color: #E4405F; color: #E4405F; }
+.contact-btn.instagram:hover { background-color: #E4405F; color: #fff; transform: scale(1.05); }
 .contact-form { display: flex; flex-direction: column; gap: 15px; }
 .contact-form input, .contact-form textarea { width: 100%; background: #222; border: 1px solid #444; padding: 15px; border-radius: 5px; color: var(--text-color); font-size: 16px; }
 .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--primary-color); box-shadow: 0 0 5px var(--primary-color); }
@@ -267,17 +270,34 @@ footer { padding: 20px 10%; text-align: center; background: var(--bg-color); }
     nav a { margin-left: 8px; font-size: 12px; }
 }
 
-/* NOVO LAYOUT PARA DESKTOP */
+/* ===== NOVO LAYOUT HÍBRIDO PARA DESKTOP ===== */
 @media (min-width: 993px) {
+    /* Regra para o layout padrão de 2 colunas (ex: Site Confeitaria) */
+    .project-item {
+        flex-direction: row;
+        align-items: center;
+        gap: 40px;
+    }
     .project-item .project-description {
+        flex: 1.5;
+    }
+    .project-item .project-media {
+        flex: 1;
+    }
+
+    /* Regra APENAS para os projetos que devem ter texto em cima */
+    .project-item.layout-stacked {
+        display: block;
+    }
+    .project-item.layout-stacked .project-description {
         margin-bottom: 30px;
     }
 
-    /* CORREÇÃO PARA IMAGENS GRANDES NO PC */
-    .project-item .project-media {
-        max-width: 80%; /* ADICIONADO PARA CORREÇÃO */
-        margin-left: auto; /* ADICIONADO PARA CORREÇÃO */
-        margin-right: auto; /* ADICIONADO PARA CORREÇÃO */
+    /* REGRA FINAL PARA DIMINUIR AS IMAGENS NO DESKTOP */
+    .project-item.layout-stacked .project-media {
+        max-width: 80%; /* Faz o bloco de mídia ser mais estreito que o texto */
+        margin-left: auto;   /* Centraliza o bloco de mídia */
+        margin-right: auto;  /* Centraliza o bloco de mídia */
     }
 
     .media-row {
