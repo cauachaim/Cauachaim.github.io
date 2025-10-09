@@ -183,7 +183,7 @@ section h2 {
 /* Project Details Sections */
 .project-item { 
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Layout padrão para mobile: empilhado */
     width: 100%; 
     background-color: var(--card-bg-color); 
     padding: 30px; 
@@ -191,7 +191,6 @@ section h2 {
     margin: 0 auto 40px auto;
     max-width: 1000px;
 }
-
 .project-media {
     min-width: 0;
 }
@@ -236,8 +235,8 @@ section h2 {
 .contact-btn.email:hover { background-color: #EA4335; color: #fff; transform: scale(1.05); }
 .contact-btn.linkedin { border-color: #0A66C2; color: #0A66C2; }
 .contact-btn.linkedin:hover { background-color: #0A66C2; color: #fff; transform: scale(1.05); }
-.contact-btn.instagram { border-color: #E4405F; color: #E4405F; }
-.contact-btn.instagram:hover { background-color: #E4405F; color: #fff; transform: scale(1.05); }
+.contact-btn.instagram { border-color: #E440F; color: #E440F; }
+.contact-btn.instagram:hover { background-color: #E440F; color: #fff; transform: scale(1.05); }
 .contact-form { display: flex; flex-direction: column; gap: 15px; }
 .contact-form input, .contact-form textarea { width: 100%; background: #222; border: 1px solid #444; padding: 15px; border-radius: 5px; color: var(--text-color); font-size: 16px; }
 .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--primary-color); box-shadow: 0 0 5px var(--primary-color); }
@@ -292,12 +291,10 @@ footer { padding: 20px 10%; text-align: center; background: var(--bg-color); }
     .project-item.layout-stacked .project-description {
         margin-bottom: 30px;
     }
-
-    /* REGRA FINAL PARA DIMINUIR AS IMAGENS NO DESKTOP */
     .project-item.layout-stacked .project-media {
-        max-width: 80%; /* Faz o bloco de mídia ser mais estreito que o texto */
-        margin-left: auto;   /* Centraliza o bloco de mídia */
-        margin-right: auto;  /* Centraliza o bloco de mídia */
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .media-row {
